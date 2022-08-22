@@ -1,0 +1,47 @@
+<% unless @alumnos.nil? || @alumnos.size == 0 %>
+  <h3>Lista de alumnos que aprobaron el examen de admisión</h3>
+  <table border="1">
+    <thead>
+      <tr>
+        <td>
+          Apellido Paterno
+        </td>
+        <td>
+          Apellido Materno
+        </td>
+        <td>
+          Nombre
+        </td>
+        <td>
+          CURP
+        </td>
+        <td>
+          Correo electrónico
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @alumnos.each do |alumno| %>
+          <td>
+            <%= alumno.apellido_paterno %>
+          </td>
+          <td>
+            <%= alumno.apellido_materno %>
+          </td>
+          <td>
+            <%= alumno.nombre %>
+          </td>
+          <td>
+            <%= alumno.curp %>
+          </td>
+          <td>
+            <%= alumno.correo_electronico %>
+          </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+<% else %>
+  <h3>La lista de alumnos que aprobaron el examen está vacía</h3>
+<% end %>

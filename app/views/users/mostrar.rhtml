@@ -1,0 +1,40 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<%= render "shared/error_messages", :target => @user %>
+ <div id="PlacaTitulo">
+<h1>Mostrar Datos del Usuario</h1>
+</div>
+<br>
+
+<table class="titled2">
+  <tr>
+    <td><b>Nombre de Usuario:</b></td>
+    <td><%=  @user.login %></td>
+  </tr>
+  <tr>
+    <td><b>Correo Electrónico:</b></td>
+    <td><%= @user.email%></td>
+  </tr>
+  <tr>
+    <td><b>Rol:</b></td>
+    <td>
+
+     <input type="radio" id="role_ids" name="role_ids" checked="true" value="<%= @user.role.id %>"</input><%= @user.role.name %>
+
+    </td>
+  </tr>
+  <tr>
+    <td><b>Campus:</b></td>
+    <td>
+      <%= @user.campus.nombre %>
+    </td>
+  </tr>
+
+</table>
+<p><a href="/home"title="Ir a Inicio" <%= link_to image_tag("regresar.png",:title=>"Ir a Inicio")%></a></p>
+<script type="text/javascript">
+  document.getElementById("user_full_name").focus();
+</script>
+

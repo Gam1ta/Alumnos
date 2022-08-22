@@ -1,0 +1,45 @@
+# Cabecera del XML
+xml.instruct!
+# Nivel principal o ROOT "reporte"
+xml.reporte do
+  # Nivel de Informacion Consulta (usuarios)
+	xml.informacion do
+		@calendario_exam.each do |i|
+			xml << i.to_xml(
+        :dasherize=>true,
+        :skip_instruct=>true,
+        :only=>[
+          :materia,
+          :hora_p1,
+          :aula_p1,
+          :hora_p2,
+          :aula_p2,
+          :hora_p3,
+          :aula_p3,
+          :hora_Or,
+          :aula_Or,
+          :hora_ext1,
+          :aula_ext1,
+          :fecha_ext1,
+          :hora_ext2,
+          :aula_ext2,
+          :fecha_ext2,
+          :hora_esp,
+          :aula_esp,
+          :fecha_esp,
+        ],
+        :root=>"calendario")
+    end
+
+    xml << @encabezado.to_xml(
+      :dasherize=>true,
+      :skip_instruct=>true,
+      :only=>[
+        :universidad,  
+        :alumno,
+        :carrera,
+        :matricula,
+      ],
+      :root=>"encabezado")
+  end
+end

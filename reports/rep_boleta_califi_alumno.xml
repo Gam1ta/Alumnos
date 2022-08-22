@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<reporte>
+−
+<informacion>
+−
+<materias>
+<promedio>7.7</promedio>
+<extra1 nil="true"/>
+<ciclo>2010-2011B</ciclo>
+<final>8.0</final>
+<grupo>801    LICENCIATURA EN CIENCIAS AMBIENTALES</grupo>
+<p3>7.8</p3>
+<extra2 nil="true"/>
+<p2>7.4</p2>
+<materia>BIOTECNOLOGÍA AMBIENTAL</materia>
+<espe nil="true"/>
+<p1>7.5</p1>
+</materias>
+−
+<materias>
+<promedio>6.7</promedio>
+<extra1 nil="true"/>
+<ciclo>2010-2011B</ciclo>
+<final>7.9</final>
+<grupo>801    LICENCIATURA EN CIENCIAS AMBIENTALES</grupo>
+<p3>5.2</p3>
+<extra2 nil="true"/>
+<p2>5.0</p2>
+<materia>OPERACIONES BÁSICAS EN INGENIERÍA AMBIENTAL</materia>
+<espe nil="true"/>
+<p1>7.0</p1>
+</materias>
+−
+<materias>
+<promedio>8.6</promedio>
+<extra1 nil="true"/>
+<ciclo>2010-2011B</ciclo>
+<final>8.1</final>
+<grupo>801    LICENCIATURA EN CIENCIAS AMBIENTALES</grupo>
+<p3>10.0</p3>
+<extra2 nil="true"/>
+<p2>9.0</p2>
+<materia>MANEJO DE ECOSISTEMAS</materia>
+<espe nil="true"/>
+<p1>8.6</p1>
+</materias>
+−
+<materias>
+<promedio>8.4</promedio>
+<extra1 nil="true"/>
+<ciclo>2010-2011B</ciclo>
+<final>8.8</final>
+<grupo>801    LICENCIATURA EN CIENCIAS AMBIENTALES</grupo>
+<p3>9.0</p3>
+<extra2 nil="true"/>
+<p2>7.7</p2>
+<materia>ORDENAMIENTO ECOLÓGICO</materia>
+<espe nil="true"/>
+<p1>7.5</p1>
+</materias>
+−
+<materias>
+<promedio>7.7</promedio>
+<extra1 nil="true"/>
+<ciclo>2010-2011B</ciclo>
+<final>8.5</final>
+<grupo>801    LICENCIATURA EN CIENCIAS AMBIENTALES</grupo>
+<p3>5.0</p3>
+<extra2 nil="true"/>
+<p2>8.9</p2>
+<materia>FORMULACIÓN Y EVALUACIÓN DE PROYECTOS</materia>
+<espe nil="true"/>
+<p1>7.5</p1>
+</materias>
+−
+<encabezado>
+<semestre>OCTAVO</semestre>
+<ciclo>2010-2011B</ciclo>
+<grupo>801    LICENCIATURA EN CIENCIAS AMBIENTALES</grupo>
+<alumno>06010029    CHAVEZ SALAS LIBIA </alumno>
+<promedio1 type="float">7.82</promedio1>
+<universidad>UNIVERSIDAD DE LA SIERRA JUÁREZ</universidad>
+</encabezado>
+</informacion>
+</reporte>

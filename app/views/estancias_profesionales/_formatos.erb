@@ -1,0 +1,92 @@
+<table class="table table-striped break_space">
+	<thead></thead>
+	<tbody>
+    <tr>
+      <th colspan="2" class="header-table-estancias">
+        <h4>Formatos para Estancias</h4>
+      </th>
+    </tr>
+
+		<tr >
+			<td class="table-estancias-formatos" align="center">
+        <b>Formato de reporte semanal</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "reporte_semanal"},
+                  :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Formato de reporte de evaluación final</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "reporte_evaluacion"},
+                 :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Informe final</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "informe_final"},
+                  :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b >Cuestionario de resultados</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "cuestionario_resultados"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Formato de recepción de documentos</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "formato_recepcion_documentos"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Solicitud para oficio de presentación de E.P.</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "solicitud_oficio_presentacion"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Carta Compromiso</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "carta_compromiso"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+    <tr>
+			<td class="table-estancias-formatos">
+        <b>Ejemplo CV Alumnos</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "cv_ejemplo"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+	</tbody>
+</table>

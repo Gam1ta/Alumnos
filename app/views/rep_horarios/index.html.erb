@@ -1,0 +1,49 @@
+<% if @ciclo_actual == nil %>
+  <table class="titled">
+    <thead><th>Para poder generar dicho reporte debe existir un 'Ciclo' en el Sistema.</th></thead>
+
+  <tr>
+    <td>Presione '<%= link_to 'aquí', :controller=>:ciclos, :action=>:new %>' para registrar un Ciclo.</td>
+  </tr>
+  </table>
+<% else %>
+  <% form_tag :action => :search do %>
+    <br/><br/>
+    <table class="titled" style="width: 90%">
+      <thead><th colspan="2" style="font-size: medium;text-align: center">Reporte Horarios</th></thead>
+    <tr>
+      <td style="font-weight: bold; width: 50%; font-size: medium">Ciclo Actual</td>
+      <td style="font-weight: bold; font-size: medium">Grupo</td>
+    </tr>
+    <tr>
+      <% if @grupos.blank?  %>
+        <%flash[:error]='No hay grupo para el periodo actual'%>
+      <%else%>
+        <td> <%= @ciclo_actual.ciclo.to_s %> </td>
+
+        <% if @grupos.size > 0 %>
+
+          <td> <%= select :grupo, :id, @grupos.collect{|g| [g.nombre, g.id]}.uniq, {:include_blank => '----Seleccione un Grupo----'} %> </td>
+
+        <% else %>
+          <td style="font-weight: bold; background: #ffe45c"> Sin Grupo(s) en el presente Ciclo Escolar</td>
+        <% end %>
+      <%end%>
+
+    </tr>
+    </table>
+    <% if @grupos.blank?  %>
+
+    <%else%>
+      <% if @grupos.size > 0 %>
+        <table cellspacing="15">
+          <tr>
+            <th style="text-align: center"> <%= link_to image_tag("regresar.png",:title=>"Regresar"), :controller => :home, :action=>:index%> </a></th>
+            <th style="text-align: center"><%= image_submit_tag ('buscar.png'), :onmouseover => "this.src='/images/buscar.png'",:onmouseout  => "this.src='/images/buscar.png'", :id => "buscar", :title=>"Consultar"  %></th>
+          </tr>
+        </table>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+

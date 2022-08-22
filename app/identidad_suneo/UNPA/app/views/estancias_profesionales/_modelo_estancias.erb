@@ -1,0 +1,103 @@
+<table class="table table-striped ">
+  <thead></thead>
+  <tbody>
+  <tr>
+    <th class="header-table-estancias">¿Qué son las Estancias Profesionales?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      Es el periodo en el cual un estudiante está integrado a una organización, desarrollando actividades relacionadas al Programa de Estudios que cursa, con el objeto de aplicar los conocimientos obtenidos y adquirir experiencia en el sector de la producción correspondiente. Debe aclararse que las estancias profesionales son independientes a la obligación del Servicio Social.
+      <br><br>
+      <span class="negritaObjetivo">Objetivo</span>
+      <ul type="square" style="margin-left:4em">
+        <li>Fortalecer, desarrollar y consolidar la vinculación de los alumnos de Licenciatura, con el sector productivo municipal, estatal, nacional e internacional.</li>
+        <li>Propiciar experiencias útiles para la futura integración del alumno en el ámbito laboral.</li>
+        <li>Coadyuvar en la formación del alumno a través del desarrollo de habilidades y capacidades para desempeñar cualquier tarea relacionada con su perfil de formación académica.</li>
+        <li>Contribuir a la formación integral del alumno a través de la combinación de conocimientos teóricos y prácticos adquiridos en la Universidad con actividades de la realidad laboral y profesional.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿En qué sectores se pueden realizar?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      Público, social y privado.
+      <br>Para la programación de las estancias profesionales se considerarán aquellas instituciones en donde se desarrollen y apliquen los conocimientos del alumno dentro del área de su especialidad.
+      <br>
+  </tr><tr>
+    <th class="header-table-estancias">¿Cuántas horas y periodos se deben cumplir?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      <ul type="square" style="margin-left:4em">
+        <li>Los practicantes deben realizar como mínimo dos periodos de estancias profesionales, con duración de 7 semanas cada uno (280 horas). Las jornadas diarias serán de 8 horas, de lunes a viernes, ó 40 horas a la semana.</li>
+        <li>Los practicantes no están obligados a realizar los dos periodos de estancias profesionales en la misma institución receptora.</li>
+        <li>Los periodos de estancias profesionales están programados para cumplirse al término del sexto semestre (primer periodo) y, al concluir el octavo semestre (segundo periodo). En los casos en que el segundo periodo de estancias profesionales no se realice al término del octavo semestre, éste podrá llevarse a cabo al término del décimo semestre.</li>
+        <li>El cumplimiento de las estancias profesionales es obligatorio para todos los estudiantes y constituirá un requisito para la obtención del título profesional.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Periodos de Estancias Profesionales</th>
+  </tr>
+  <tr>
+    <td>
+      <h4>
+        <span class="text-left negritaObjetivo">Fechas para los Periodos de Estancias Profesionales</span>
+      </h4>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th class="style_periodos">Periodo</th>
+          <th class="style_periodos">Fecha de Inicio</th>
+          <th class="style_periodos">Fecha de Término</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="td_periodos">Primero</td>
+          <td class="td_periodos"><%=(@inicio_periodo_uno == nil)?  "No Registrado": (l @inicio_periodo_uno)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_uno == nil)?  "No Registrado": (l @fin_periodo_uno)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Segundo</td>
+          <td class="td_periodos"><%= (@inicio_periodo_dos == nil)?  "No Registrado": (l @inicio_periodo_dos)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_dos == nil)?  "No Registrado": (l @fin_periodo_dos)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Tercero</td>
+          <td class="td_periodos"><%= (@inicio_periodo_tres == nil)?  "No Registrado": (l @inicio_periodo_tres)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_tres == nil)?  "No Registrado": (l @fin_periodo_tres)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Cuarto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cuatro == nil)?  "No Registrado": (l @inicio_periodo_cuatro)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cuatro == nil)?  "No Registrado": (l @fin_periodo_cuatro)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Quinto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cinco == nil)?  "No Registrado": (l @inicio_periodo_cinco)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cinco == nil)?  "No Registrado": (l @fin_periodo_cinco)%></td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Requisitos </th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      <ul type="square" style="margin-left:4em">
+        <li>Contar con carnet de IMSS, ISSSTE, INSABI o con un seguro de vida particular.</li>
+        <li>Haber acreditado todas las asignaturas del plan de estudios hasta el sexto, octavo o décimo semestre, según corresponda.</li>
+        <li>Estar inscrito como alumno regular en el semestre respectivo.</li>
+        <li>Registrarse en la Coordinación de Servicio Social y Estancias Profesionales.</li>
+        <li>Contar con la carta de aceptación de la institución en donde realizará la estancia profesional y tener asignado un supervisor responsable en la misma.</li>
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,156 @@
+<table class="table table-striped ">
+  <thead></thead>
+  <tbody>
+  <tr>
+    <th class="header-table-estancias">¿Qué son las Estancias Profesionales?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      <% unless @modelo_estancias.blank? %>
+        <%= @modelo_estancias.info_what_is %>
+      <%else%>
+        NO EXISTE INFORMACIÓN REGISTRADA
+        <!--Es la actividad académica obligatoria que deberán realizar los alumnos al finalizar sexto semestre, octavo semestre y que no tengan materias adeudadas que regularizar en cursos de verano.-->
+      <% end %>
+      
+      <br><br>
+      <span class="negritaObjetivo">Objetivo</span>
+      <br><br>
+      <ul type="square" style="margin-left:4em">
+        <% unless @modelo_estancias.blank? %>
+          <% cad_sep =  @modelo_estancias.objetivos.split(".") %>
+          <% cad_sep.each do |var| %>
+            <li> <%= var %>.</li>
+          <% end %>
+        <%else%>
+          NO EXISTE INFORMACIÓN REGISTRADA
+          <!--
+            <li>Fortalecer, desarrollar y consolidar la vinculación de los alumnos de licenciatura, con el sector productivo estatal, nacional e internacional.</li>
+            <li>Propiciar experiencias útiles para la futura integración del alumno al ámbito laboral.</li>
+            <li>Coadyuvar en la formación del alumno a través del desarrollo de habilidades y capacidades para desempeñar cualquier tarea relacionada con su perfil de egreso.</li>
+            <li>Contribuir a la formación integral del alumno a través de la combinación de conocimientos teóricos y prácticos adquiridos en la universidad con actividades de la realidad laboral y profesional.</li>
+          -->
+        <% end %>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿Dónde realizarlas?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      <% unless @modelo_estancias.blank? %>
+        <%= @modelo_estancias.info_lugar %>
+      <%else%>
+        NO EXISTE INFORMACIÓN REGISTRADA
+      <% end %>
+      <!--<br><br>
+      Los alumnos podrán realizar de acuerdo a su Plan de Estudios sus Estancias Profesionales en los diferentes sectores:
+      <br>
+      <ul type="square" style="margin-left:4em">
+        <li>Público</li>
+        <li>Social</li>
+        <li>Privado</li>
+      </ul>
+      En donde desarrollen y apliquen los conocimientos dentro del área de su especialidad.</td>
+      -->
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿Cuántas horas se deben realizar?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      <ul type="square" style="margin-left:4em">
+        <% unless @modelo_estancias.blank? %>
+          <% cad_sep2 =  @modelo_estancias.info_horas.split(".") %>
+          <% cad_sep2.each do |var| %>
+            <li> <%= var %>.</li>
+          <% end %>
+        <%else%>
+          NO EXISTE INFORMACIÓN REGISTRADA
+          <!--
+            <li>El Alumno deberá cumplir como mínimo dos Estancias Profesionales.</li>
+            <li>Deberá acreditar mínimamente 560 horas por concepto de Estancia Profesional.</li>
+            <li>El número mínimo de horas por Estancia Profesional que deberá acreditar el alumno será de 280 horas.</li>
+            <li>Solo podrá realizar una Estancia Profesional por periodo de verano.</li>
+          -->
+        <% end %>        
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Periodos de Estancias Profesionales</th>
+  </tr>
+  <tr>
+    <td>
+      <h4>
+        <span class="text-left negritaObjetivo">Fechas para los Periodos de Estancias Profesionales</span>
+      </h4>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th class="style_periodos">Periodo</th>
+          <th class="style_periodos">Fecha de Inicio</th>
+          <th class="style_periodos">Fecha de Término</th>
+          <th class="style_periodos">Fecha Límite Entrega Documentos</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="td_periodos">Primero</td>
+          <td class="td_periodos"><%=(@inicio_periodo_uno == nil)?  "No Registrado": (l @inicio_periodo_uno)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_uno == nil)?  "No Registrado": (l @fin_periodo_uno)%></td>
+          <td class="td_periodos"><%= (@entrega_documentos_periodo_uno == nil)?  "No Registrado": (l @entrega_documentos_periodo_uno)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Segundo</td>
+          <td class="td_periodos"><%= (@inicio_periodo_dos == nil)?  "No Registrado": (l @inicio_periodo_dos)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_dos == nil)?  "No Registrado": (l @fin_periodo_dos)%></td>
+          <td class="td_periodos"><%= (@entrega_documentos_periodo_dos == nil)?  "No Registrado": (l @entrega_documentos_periodo_dos)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Tercero</td>
+          <td class="td_periodos"><%= (@inicio_periodo_tres == nil)?  "No Registrado": (l @inicio_periodo_tres)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_tres == nil)?  "No Registrado": (l @fin_periodo_tres)%></td>
+          <td class="td_periodos"><%= (@entrega_documentos_periodo_tres == nil)?  "No Registrado": (l @entrega_documentos_periodo_tres)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Cuarto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cuatro == nil)?  "No Registrado": (l @inicio_periodo_cuatro)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cuatro == nil)?  "No Registrado": (l @fin_periodo_cuatro)%></td>
+          <td class="td_periodos"><%= (@entrega_documentos_periodo_cuatro == nil)?  "No Registrado": (l @entrega_documentos_periodo_cuatro)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Quinto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cinco == nil)?  "No Registrado": (l @inicio_periodo_cinco)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cinco == nil)?  "No Registrado": (l @fin_periodo_cinco)%></td>
+          <td class="td_periodos"><%= (@entrega_documentos_periodo_cinco == nil)?  "No Registrado": (l @entrega_documentos_periodo_cinco)%></td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Requisitos </th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      <ul type="square" style="margin-left:4em">
+        <% unless @modelo_estancias.blank? %>
+          <% cad_sep3 =  @modelo_estancias.requisitos.split(".") %>
+          <% cad_sep3.each do |var| %>
+            <li> <%= var %>.</li>
+          <% end %>
+        <%else%>
+          NO EXISTE INFORMACIÓN REGISTRADA
+          <!--
+            <li>Tramitar en el IMSS / ISSSTE el Carnet de citas (entregar una copia a la coordinación de Estancia Profesional)</li>
+            <li>Tramitar su CONSTANCIA DE VIGENCIA DE DERECHOS del IMSS o ISSSTE en el área de servicios de AFILIACIÓN-VIGENCIA DE DERECHOS correspondiente. (entregar una copia a la coordinación de Estancia Profesional)</li>
+          -->
+        <% end %>        
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,73 @@
+<div class="row">
+	<div class="espacio">
+		<div class="well-personalizado">
+			<div class="row">
+        <div class="col-lg-6">
+          <h4>Estancias Profesionales</h4>
+        </div>
+        <div class="col-lg-6">
+          <%= link_to "Descargar Guia de Uso...", {:action => :download_guia, :nombre_archivo => "guia_uso"},  :class=>"btn btn-info pull-right"%>
+        </div>
+      </div>
+      <hr>
+			<ul class="nav nav-tabs-estancias">
+				<li class="active"><a data-toggle="tab" href="#modelo">Modelo</a></li>
+				<!--<li><a data-toggle="tab" href="#procedimiento">Procedimiento</a></li>-->
+				<li><a data-toggle="tab" href="#documentacion">Documentación</a></li>
+				<li><a data-toggle="tab" href="#formatos">Formatos</a></li>
+				<li><a data-toggle="tab" href="#empresas">Empresas</a></li>
+				<li><a data-toggle="tab" href="#misempresas">Mis Empresas</a></li>
+        <li><a data-toggle="tab" href="#documentacion_entregada">Documentos</a></li>
+        <!--<li><a data-toggle="tab" href="#alta_empresas">Alta Empresas</a></li>
+        <li><a data-toggle="tab" href="#empresas_propuestas">Propuestas</a></li>-->
+			</ul>
+      
+			<div class="tab-content ">
+				<div class="tab-pane active" id="modelo">
+          <%= render :partial => "modelo_estancias" %>
+				</div>
+
+				<div class="tab-pane" id="procedimiento">
+					  <%= render :partial => "procedimiento_estancias" %>
+				</div>
+
+
+				<div class="tab-pane" id="documentacion">
+					 <%= render  :partial => "documentacion_estancias" %>
+				</div>
+			
+				<div class="tab-pane" id="formatos">
+					<%= render :partial => "formatos" %>
+				</div>
+				
+				<div class="tab-pane" id="empresas">
+					<%= render :partial => "empresas" %>
+				</div>
+
+				<div class="tab-pane" id="misempresas">
+					<%= render :partial => "misempresas" %>
+				</div>
+
+        <div class="tab-pane" id="documentacion_entregada">
+          <%= render :partial => "documentos_registrados"  %>
+        </div>
+
+        <div class="tab-pane" id="alta_empresas">
+          <%= render :partial => "alta_empresas" %>
+        </div>
+
+        <div class="tab-pane" id="empresas_propuestas">
+          <%= render :partial => "empresas_propuestas" %>
+        </div>
+
+
+      </div>
+		</div>
+	</div>
+</div>
+
+<% if @tab && !@tab.empty? %>
+	<script type="text/javascript">
+		$('a[href="#<%= @tab %>"]').tab("show");
+	</script>	
+<% end %>

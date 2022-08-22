@@ -1,0 +1,2 @@
+module ResultadosFichasHelper
+end

@@ -1,0 +1,12 @@
+
+<%puts "xxx"%>
+<%@alumno= params[:alumno_id]%>
+<%puts @alumno%>
+<div id="PlacaTitulo"><h1><center>Reporte general del alumno</center></h1></div>
+<br/><br/>
+<br/><br/>
+<iframe height="550px" src="<%= url_for :action=>'calendario_examen',:alumno_id=>@alumno, :ignoreLayout => "no" %>" width="70%">
+
+</iframe>
+<br/><br/>
+<%= link_to image_tag("regresarb.png",:title=>"Regresar"), :action=>:index %>

@@ -1,0 +1,211 @@
+<% if @mensaje.nil? %>
+  <%  if @calificaciones.calificaciones.empty? %>
+    <%= render :partial => "shared/messages", :locals => { :msg => 'No existen calificaciones para la inscripción seleccionada.', :class_name => 'info' } %>
+  <% else %>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 espacio_2">
+
+        <div class="panel panel-yellow panel-table">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-lg-4 col-sm-4">
+                <h4 class="texto-centro">Calificaciones: <span> <%= get_semester_name(@calificaciones.semestre_nombre).capitalize  %> </span> Semestre</h4>
+              </div>
+
+              <div class="col-lg-4 col-sm-4">
+                <h4 class="texto-centro">Grupo: <span>  <%= @calificaciones.grupo_nombre  %> </span></h4>
+              </div>
+
+              <div class="col-lg-4 col-sm-4">
+                <h4 class="texto-centro">Periodo: <span>  <%= @calificaciones.periodo_nombre  %> </span></h4>
+              </div>
+
+            </div>                    
+          </div>
+
+          <div class="panel-body">
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th class="warning">Asignatura</th>
+                    <th title="Parcial 1" class="warning">P1</th>
+                    <th title="Asistencia Parcial 1" class="warning">A1</th>
+                    <th title="Parcial 2" class="warning">P2</th>
+                    <th title="Asistencia Parcial 2" class="warning">A2</th>
+                    <th title="Parcial 3" class="warning">P3</th>
+                    <th title="Asistencia Parcial 3" class="warning">A3</th>
+                    <th title="Ordinario" class="warning">O</th>
+                    <th title="Asistencia Ordinario" class="warning">AO</th>
+                    <th title="% Asistencia Total" class="warning">PA</th>
+                    <th title="Promedio Final" class="warning">PF</th>
+                    <th title="Extraordinario 1" class="warning">EX1</th>
+                    <th title="Extraordinario 2" class="warning">EX2</th>
+                    <th title="Especial" class="warning">ESP</th>
+                  </tr> 
+                </thead>
+                <tbody>
+                  <% if @calificaciones.calificaciones.empty? %>
+                    <tr>
+                      <td colspan="14" style="text-align: center">No hay Calificaciones</td>
+                    </tr>
+                  <% else %>
+                    <% @calificaciones.calificaciones.each do |c| %>
+                      <tr>
+                        <td class="warning"><%= c.nombre %></td>
+                        <td <%= get_color_for_calificacion(c.get_parcial1_sd_or_np) %>><%= c.get_parcial1_sd_or_np %></td>
+                        <td <%= get_color_for_asistencia(c.asistencia_p1) %>><%= number_to_percentage(c.asistencia_p1, :precision => 0) %></td>
+                        <td <%= get_color_for_calificacion(c.get_parcial2_sd_or_np)%>><%= c.get_parcial2_sd_or_np %></td>
+                        <td <%= get_color_for_asistencia(c.asistencia_p2) %>><%= number_to_percentage(c.asistencia_p2, :precision => 0) %></td>
+                        <td <%= get_color_for_calificacion(c.get_parcial3_sd_or_np)%>><%= c.get_parcial3_sd_or_np %></td>
+                        <td <%= get_color_for_asistencia(c.asistencia_p3) %>><%= number_to_percentage(c.asistencia_p3, :precision => 0) %></td>
+                        <td <%= get_color_for_calificacion(c.final)%>><%= c.get_ordinario_sd_or_np %></td>
+						<td <%= get_color_for_asistencia(c.asistencia_ordinario) %>><%= number_to_percentage(c.asistencia_ordinario, :precision => 0) %></td>
+                        <td <%= get_color_for_asistencia(c.asistencia_final) %>><%= number_to_percentage(c.asistencia_final, :precision => 0) %></td>
+                        <td <%= get_color_for_calificacion(c.promedio)%>><%= c.promedio %></td>
+                        <td <%= get_color_for_calificacion(c.get_extra1_sd_or_np)%>><%= c.get_extra1_sd_or_np %></td>
+                        <td <%= get_color_for_calificacion(c.get_extra2_sd_or_np)%>><%= c.get_extra2_sd_or_np %></td>
+                        <td <%= get_color_for_calificacion(c.get_especial_sd_or_np)%>><%= c.get_especial_sd_or_np %></td>
+                      </tr>
+                    <% end %>
+                  <% end %>                          
+
+                </tbody>
+              </table>
+            </div></div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+  <!--panel profesores-->
+  <%  if @calificaciones.get_profesores.empty? %>
+    <%#= render :partial => "shared/messages", :locals => { :msg => 'No existen profesores para la inscripción seleccionada.', :class_name => 'info' } %>
+  <% else %>
+    <div class="col-md-8 col-md-offset-2 espacio_2">
+
+      <div class="panel panel-primary panel-table">
+        <div class="panel-heading">
+          <h4 class="texto-centro">Profesores Asignados por Evaluación</h4>
+        </div>
+
+        <div class="panel-body">
+          <div class="table-responsive">
+            <% if !@calificaciones.get_profesores.blank? %>
+              <table class="table table-striped table-bordered table-condensed">
+                <thead>
+                  <tr>
+                    <th class="active">Asignatura</th>
+                    <th class="active">Profesor Asignado</th>
+                    <th class="active">Evaluaciones</th>
+
+                  </tr> 
+                </thead>
+                <tbody>
+                  <% @calificaciones.get_profesores.each do |profesor| %>
+                    <tr>
+                      <td><%= profesor[:asignatura_nombre] %></td>
+                      <td><%= profesor[:profesor_nombre] %></td>
+                      <td>
+                        <% profesor[:examenes].each do |examen| %>
+                          <%= examen.nombre.to_s + ' ' %>
+                        <% end %>
+                      </td>
+                    </tr>
+                  <% end %> 
+                </tbody>
+              </table>
+            <% else %>
+              <div id="message">
+                No se han asignado Profesores
+              </div>
+            <% end %>          
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+<% else %>
+  <%= render :partial => "shared/messages", :locals => { :msg =>  @mensaje, :class_name => 'info' } %>
+<% end %>
+
+<!--CALENDARIO PARA IDIOMAS
+< % if @mensaje_idiomas.nil? %>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 espacio_2">
+
+      <div class="panel panel-yellow panel-table">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-lg-6 col-sm-6">
+              <h4 class="texto-centro">Calificaciones de Idiomas </span></h4>
+            </div>
+            <div class="col-lg-6 col-sm-6">              
+            </div>
+          </div>                    
+        </div>
+
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th class="warning">Idioma</th>
+                  <th title="Parcial 1" class="warning">Nivel</th>
+                  <th title="Asistencia Parcial 1" class="warning">Final</th>
+                  <th title="Parcial 2" class="warning">Extraordinario</th>
+                </tr> 
+              </thead>
+              <tbody>
+                < % if @calificaciones_idiomas.empty? %>
+                    <tr>
+                      <td colspan="4" style="text-align: center">No hay Calificaciones</td>
+                    </tr>
+                < % else %>
+                  < % @calendario_idiomas.each do |examen| %>
+                    < % fi =  exam.find {|x| x[:examen] == "Final"} %>
+                    < % ex =  exam.find {|x| x[:examen] == "Extraordinario"} %>
+                    
+                    <tr>
+                      <td> < % = examen[:idioma] %></td>
+                      <td> < % = examen[:nivel] %></td>
+                      < % if fi.blank? %>
+                        <td>Sin asignación</td>
+                      < % else %>
+                        <td>
+                          < % fi[:detalles].each do |dt| %>
+                            <p>Habilidad: < % = dt[:habilidad]%></p>
+                            <p>Calificación: < % = dt[:calificacion]%></p>
+                            <p>Profesor: < % = dt[:profesor]%></p>
+                            <p>__________________________</p>
+                          < % end %>
+                        </td>
+                      < % end %>                          
+                      < % if ex.blank? %>
+                        <td>Sin asignación</td>
+                      < % else %>
+                        <td>
+                          < % ex[:detalles].each do |xt| %>
+                            <p>Habilidad: < % = xt[:habilidad]%></p>
+                            <p>Calificación: < % = xt[:calificacion]%></p>
+                            <p>Profesor: < % = xt[:profesor]%></p>
+                            <p>__________________________</p>
+                          < %  end %>
+                        </td>
+                      < % end %>
+                    </tr>
+                  < % end %>
+                < % end %>                          
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+< % else %>
+  < % = render :partial => "shared/messages", :locals => { :msg =>  @mensaje_idiomas, :class_name => 'info' } %>
+< % end %>
+-->

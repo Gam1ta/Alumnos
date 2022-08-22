@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NES ESCOLARES LOGIN</title>
+<%#= stylesheet_link_tag :all %>
+    <%= stylesheet_link_tag 'bootstrap.css', 'bootstrap-theme.css', 'PA_Login.css', 'estilos_interfaz_PA.css' %>
+
+    <%#= javascript_include_tag :defaults %>
+    <%#= javascript_include_tag 'jquery.js', 'bootstrap.js' %>
+    
+    
+    <% # agregado en el update a rails 4.2.0    lo anterior es para rails 3.0.5 %>
+    <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application' , media: 'all', 'data-turbolinks-track' => true  %>    
+    
+    <%#= csrf_meta_tag %>
+  </head>
+  <body class="fondo">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 top">
+          <div class="well">
+            <%= yield %>                
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+<%#*<footer>%>
+<%#*<div id="footer">%>
+<%#*<div class="kadalink">%>
+<%#*<a href="http://www.kadasoftware.com" target="_blank"> <img src="/images/logokada.png" alt="KadaSoftware"/>%>
+<%#*</a>%>
+<%#*</div>%>
+<%#*</div> <!--footer-->%>
+<%#*</footer>%>
+</html>
+
+

@@ -1,0 +1,56 @@
+/*Panel tabs calendarios */
+.panel-tabs {
+    position: relative;
+    clear:both;
+    border-bottom: 1px solid transparent;
+}
+
+.panel-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.panel-tabs > li > a {
+    margin-right: 2px;
+    margin-top: 0px;
+    line-height: .85;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    color: #ffffff;
+}
+
+.panel-tabs > li > a:hover {
+    border-color: transparent;
+    color: #ffffff;
+    background-color: rgba(255,255,255, .23) !important;
+}
+
+.panel-tabs > li.active > a,
+.panel-tabs > li.active > a:hover,
+.panel-tabs > li.active > a:focus {
+    color: #fff;
+    cursor: default;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255, .23) !important;
+    border-bottom-color: transparent;
+}
+
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 8px 15px !important;
+    font-size: 16px;
+}
+
+th, td {
+    text-align: center;
+    vertical-align: middle;
+    }
+
+.color_tr {
+    background-color: rgba(237, 109, 21, .18);
+
+}

@@ -1,0 +1,7 @@
+<div id="PlacaTitulo"><h1>Reporte de Boleta de Calificaciones</h1></div>
+<br/><br/>
+ <iframe height="550px" src="<%= url_for :action=>'xml',:ciclo_id=>@ciclo_id,:alumno_id=>@alumno_id, :ignoreLayout => "no" %>" width="90%">
+ </iframe>
+
+<br/><br/>
+<%= link_to image_tag("regresar.png",:title=>"Regresar"), :action=>:index %>

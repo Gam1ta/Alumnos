@@ -1,0 +1,28 @@
+<% if @ciclos.ciclo== nil %>
+  <table class="titled2">
+    <thead><th>Para poder generar dicho reporte debe existir un 'Ciclo actual' en el Sistema.</th></thead>
+  <tr>
+    <td>Presione '<%= link_to 'aquí', :controller=>:ciclos, :action=>:new %>' para registrar un Ciclo.</td>
+  </tr>
+  </table>
+<% else %>
+  <%if @todo.blank?%>
+    <table class="titled2">
+      <thead><th>No hay información</th></thead>
+    <tr>
+      <td>No tiene inscripciones de cursos y no existen</td>
+    </tr>
+    </table>
+  <%else%>
+    <table class="titled2">
+      <thead><th>No hay información</th></thead>
+    <tr>
+      <td>No estan dadas de alta el calendario de examenes</td>
+    </tr>
+    </table>
+  <%end%>
+<%end%>
+   
+  
+
+

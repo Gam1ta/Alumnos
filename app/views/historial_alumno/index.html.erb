@@ -1,0 +1,16 @@
+<div id="PlacaTitulo"><h1>Historial de alumno</h1></div>
+<%puts "datos"%>
+<%puts !@todo.blank?%>
+<%puts @x%>
+<%if @todo.blank? or @x==0%>
+
+<center>  <table class="titled2" style="width: 90%">
+   <thead><th>No existe información de calificaciones</th></thead>
+  <tbody>
+     <tr>
+    <td>Las calificaciones de las materias no se han ingresado</td>
+  </tr>
+  </tbody>
+  </table>
+  </center><%end%>
+

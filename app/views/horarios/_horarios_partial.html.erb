@@ -1,0 +1,157 @@
+<% if @mensaje.nil? %>
+  <% unless @horarios.empty? %>
+
+    <!--panel horario-->
+
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 espacio">
+
+            <div class="panel panel-success panel-table">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-lg-5 col-sm-5">
+                    <% @insc=Inscripcion.find @id_inscripcion %>
+                    <%@semestre= Semestr.find @insc.semestre_id  %>
+                    <h4 class="texto-centro">Horario de Clases: <%= @semestre.clave_semestre %> SEMESTRE</h4>
+                  </div>
+
+                  <div class="col-lg-3 col-sm-3">
+                    <% @insc=Inscripcion.find @id_inscripcion %>
+                    <%@grupo= Grupo.find @insc.grupo_id  %>
+                    <h4 class="texto-centro">Grupo: <%= @grupo.nombre %> <span>
+
+                    </span></h4>
+                  </div>
+
+                  <div class="col-lg-4 col-sm-4">
+                    <h4 class="texto-centro">Periodo: <span><%= @periodo_actual  %></span></h4>
+                  </div>
+
+                </div>  
+              </div>
+
+              <div class="panel-body">
+                <div class="table-responsive">
+                  <table class="table table-striped table-bordered">
+                    <thead>
+                      <tr>
+                        <th class="success ">Asignatura</th>
+                        <th class="success ">Lunes</th>
+                        <th class="success ">Martes</th>
+                        <th class="success ">Miércoles</th>
+                        <th class="success ">Jueves</th>
+                        <th class="success ">Viernes</th>
+                      </tr> 
+                    </thead>
+                    <tbody>
+
+                      <% @horarios.each do |asignatura| %>
+                        <tr>
+                          <th class="success"><%= asignatura.nombre %></th>
+                          <% asignatura.horarios.each do |h| %>
+                            <td><%= h.hora %>
+                             <h5 class="text-success"> <%= h.aula %></h5>
+                            </td>
+                          <% end %>
+                        </tr>
+                      <% end %>                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+    <!--panel profesores-->
+    <div class="col-md-8 col-md-offset-2 espacio">
+
+      <div class="panel panel-primary panel-table">
+        <div class="panel-heading">
+          <h4 class="text-center">Consulta de Materias y Profesores</h4>
+        </div>
+
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered table-condensed">
+              <thead>
+                <tr>
+                  <th class="active">Asignatura</th>
+                  <th class="active">Profesor</th>
+
+                </tr> 
+              </thead>
+              <tbody>
+
+                <% @horarios.each do |asignatura| %>
+                      <tr>
+
+                        <th class="active"><%= asignatura.nombre %></th>
+
+                        <% @hor= Horario.find_by_curso_id asignatura.curso_id %>
+                        
+                        <%if @hor %>
+                              <%@prof_id=@hor.profesor_id%>
+                              <%@prof_nom=Profesor.find @prof_id%>
+                              <th> <%= @prof_nom.full_name_with_grado %></th>
+                        <%else%>
+
+                          <th> <%= "SIN PROFESOR"%></th>
+
+                      <%end%>
+
+                      </tr>
+
+
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% else %>
+    <%= render :partial => "shared/messages", :locals => { :msg => ' No estás inscrito a ninguna asignatura. para la inscripción seleccionada.', :class_name => 'info' } %>
+  <% end %>
+<% else %>
+  <%= render :partial => "shared/messages", :locals => { :msg =>  @mensaje, :class_name => 'info' } %>
+<% end %>
+
+
+<% if @mensaje_idiomas.nil? %>
+  <div class="panel-body col-xs-11 col-md-12 col-lg-12 col-sm-12" >
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th class="success ">Idioma</th>
+            <th class="success ">Nivel</th>
+            <th class="success ">Clase</th>
+            <th class="success ">Profesor</th>
+            <th class="success ">Hora</th>
+            <th class="success ">Aula</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <% @horarios_idiomas.each do |asignatura| %>
+            <tr>
+              <th><%= asignatura[:idioma] %></th>
+              <th><%= asignatura[:nivel] %></th>
+              <th><%= asignatura[:clase] %></th>
+              <th><%= asignatura[:profesor] %></th>
+              <td><%= asignatura[:hora] %></td>
+              <td><%= asignatura[:lugar] %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<% else %>
+  <%= render :partial => "shared/messages", :locals => { :msg =>  @mensaje_idiomas, :class_name => 'info' } %>
+<% end %>
+

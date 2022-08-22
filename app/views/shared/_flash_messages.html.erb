@@ -1,0 +1,17 @@
+<div class="row content">
+  <% flash.each do |name, msg| %>
+  <% if msg.instance_of?(Array) %>
+    <%= render :partial => "shared/messages", :locals => { :msg_title => msg.first, :msg => msg[1..-1], :class_name => name } %>
+  <% else %>
+    <%= render :partial => "shared/messages", :locals => { :msg => msg, :class_name => name } %>
+  <% end %>
+  <% end %>
+</div>
+<script type="application/javascript">
+    $(document).ready(function() {
+        setTimeout(function() {
+            $(".content").fadeOut(1500);
+        }, 15
+    )
+    });
+</script>

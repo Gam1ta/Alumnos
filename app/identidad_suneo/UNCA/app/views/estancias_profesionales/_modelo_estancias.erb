@@ -1,0 +1,103 @@
+<table class="table table-striped ">
+  <thead></thead>
+  <tbody>
+  <tr>
+    <th class="header-table-estancias">¿Qué son las Estancias Profesionales?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      Es la actividad académica obligatoria que deberá realizar el alumno al finalizar el sexto y octavo semestre.
+      <br><br>
+      <span class="negritaObjetivo">Objetivos</span>
+      <br><br>
+      <ul type="square" style="margin-left:4em">
+        <li>Contribuir a la formación integral del alumno, a través de la combinación de conocimientos teóricos y prácticos adquiridos en la Universidad, complementados con actividades en los ámbitos laboral y profesional.</li>
+        <li>Fortalecer desarrollar y consolidar la vinculación de los alumnos con el sector productivo municipal, estatal, nacional e internacional.</li>
+        <li>Propiciar experiencias útiles para la futura integración del alumno en el ámbito laboral.</li>
+        <li>Coadyuvar en la formación del alumno a través del desarrollo de habilidades y capacidades, para desempeñar cualquier tarea relacionada con su perfil de formación académica.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿En qué sectores se pueden realizar?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      El alumno deberá realizarla en los sectores:
+      <br>
+      <ul type="square" style="margin-left:4em">
+        <li>Público,</li>
+        <li>Social, o</li>
+        <li>Privado</li>
+      </ul>
+    </td>
+  </tr><tr>
+    <th class="header-table-estancias">¿Cuántas horas y periodos se deben cumplir?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+        En cada periodo se deberán cubrir 280 horas, en total se deberán cubrir 560 horas por los dos periodos.
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Periodos de Estancias Profesionales</th>
+  </tr>
+  <tr>
+    <td>
+      <h4>
+        <span class="text-left negritaObjetivo">Fechas para los Periodos de Estancias Profesionales</span>
+      </h4>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th class="style_periodos">Periodo</th>
+          <th class="style_periodos">Fecha de Inicio</th>
+          <th class="style_periodos">Fecha de Término</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="td_periodos">Primero</td>
+          <td class="td_periodos"><%=(@inicio_periodo_uno == nil)?  "No Registrado": (l @inicio_periodo_uno)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_uno == nil)?  "No Registrado": (l @fin_periodo_uno)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Segundo</td>
+          <td class="td_periodos"><%= (@inicio_periodo_dos == nil)?  "No Registrado": (l @inicio_periodo_dos)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_dos == nil)?  "No Registrado": (l @fin_periodo_dos)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Tercero</td>
+          <td class="td_periodos"><%= (@inicio_periodo_tres == nil)?  "No Registrado": (l @inicio_periodo_tres)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_tres == nil)?  "No Registrado": (l @fin_periodo_tres)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Cuarto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cuatro == nil)?  "No Registrado": (l @inicio_periodo_cuatro)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cuatro == nil)?  "No Registrado": (l @fin_periodo_cuatro)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Quinto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cinco == nil)?  "No Registrado": (l @inicio_periodo_cinco)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cinco == nil)?  "No Registrado": (l @fin_periodo_cinco)%></td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿Qué requisitos debe cumplir el alumno para realizar sus Estancias Profesionales?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      <ul type="a" style="margin-left:4em">
+        <li>Cubrir con el 60% para el primer periodo y 80% para el segundo periodo, en los créditos del plan de estudios.</li>
+        <li>Contar con carnet de IMSS, ISSSTE, INSABI o con un seguro de vida particular.</li>
+        <li>Tener vigente su cuenta de correo electrónico de la Universidad.</li>
+        <li>Contar con su credencial de estudiante vigente.</li>
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>

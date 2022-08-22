@@ -1,0 +1,117 @@
+<table class="table table-striped ">
+  <thead></thead>
+  <tbody>
+  <tr>
+    <th class="header-table-estancias">¿Qué son las Estancias Profesionales?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias" style="text-align: justify">
+      De acuerdo con el Reglamento de Alumnos, en el capítulo II de las estancias profesionales, en el ARTÍCULO 90, la Estancia Profesional es la actividad académica obligatoria que deberá realizar el alumno al finalizar el sexto y el octavo semestres. La gestión, desarrollo y seguimiento de la Estancia Profesional estará a cargo del Departamento de Servicios Escolares y deberá contar con el visto bueno de la Jefatura de Carrera. Para el caso del área de la salud, la Estancia Profesional consiste en prácticas que forman parte de los planes de estudios, que se rigen de acuerdo a las Normas Oficiales Mexicanas para la utilización de campos clínicos para las prácticas clínicas y servicio social en el área de la salud, emitidas por la Secretaria de Salud.
+      <br><br>
+      <span class="negritaObjetivo">Objetivos de las Estancias Profesionales</span>
+      <br><br>
+      De acuerdo con el Reglamento de Alumnos, en el capítulo II de las estancias profesionales, en el ARTÍCULO 92, establece que la realización de la Estancia Profesional tiene como objetivos:
+      <ul type="square" style="margin-left:4em">
+        <li>Fortalecer, desarrollar y consolidar la vinculación de los alumnos con el sector productivo municipal, estatal, nacional e internacional.</li>
+        <li>Propiciar experiencias útiles para la futura integración del alumno en el ámbito laboral.</li>
+        <li>Coadyuvar en la formación del alumno a través del desarrollo de habilidades y capacidades, para desempeñar cualquier tarea relacionada con su perfil de formación académica.</li>
+        <li>Contribuir a la formación integral del alumno, a través de la combinación de conocimientos teóricos y prácticos adquiridos en la Universidad, complementados con actividades en los ámbitos laboral y profesional.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿En qué sectores se pueden realizar?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias" style="text-align: justify">
+      De acuerdo con el Reglamento de Alumnos, en el capítulo II de las estancias profesionales, en el ARTÍCULO 91, una estancia deberá estar acorde con el plan de estudios del alumno y deberá realizar la Estancia Profesional en los sectores público, social o privado. Para la programación de las estancias profesionales se considerarán aquellas instituciones y empresas en donde se desarrollen y apliquen los conocimientos del alumno dentro del área de su especialidad.
+      <br>
+    </td>
+  </tr><tr>
+    <th class="header-table-estancias">¿Cuántas horas y períodos se deben cumplir?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias" style="text-align: justify">
+      ARTÍCULO 93. La Estancia Profesional, comprende dos periodos durante el verano. En cada periodo se deberán cubrir como mínimo 280 horas, en total se deberán cubrir 560 horas por los dos periodos. Sólo se podrá realizar una estancia por periodo de verano. Las jornadas diarias en la estancia se determinarán con el visto bueno del Departamento de Servicios Escolares y la empresa donde se realicen. La Estancia Profesional podrá realizarse en el extranjero, en cuyo caso la Universidad no tramitará ningún documento migratorio ni de seguro médico, pero sí les reconocerá validez, siempre y cuando se haya autorizado expresamente y cumpla con los lineamientos establecidos en el presente reglamento. Por causas excepcionales y siempre que se cuente con la autorización de la ViceRectoría Académica, los egresados que no hayan cubierto sus dos periodos de Estancia Profesional en los tiempos señalados anteriormente, podrán cubrir sus 560 horas en un solo periodo.
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Periodos de Estancias Profesionales</th>
+  </tr>
+  <tr>
+    <td>
+      <h4>
+        <span class="text-left negritaObjetivo">Fechas para los Periodos de Estancias Profesionales</span>
+      </h4>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th class="style_periodos">Periodo</th>
+          <th class="style_periodos">Fecha de Inicio</th>
+          <th class="style_periodos">Fecha de Término</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="td_periodos">Primero</td>
+          <td class="td_periodos"><%=(@inicio_periodo_uno == nil)?  "No Registrado": (l @inicio_periodo_uno)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_uno == nil)?  "No Registrado": (l @fin_periodo_uno)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Segundo</td>
+          <td class="td_periodos"><%= (@inicio_periodo_dos == nil)?  "No Registrado": (l @inicio_periodo_dos)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_dos == nil)?  "No Registrado": (l @fin_periodo_dos)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Tercero</td>
+          <td class="td_periodos"><%= (@inicio_periodo_tres == nil)?  "No Registrado": (l @inicio_periodo_tres)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_tres == nil)?  "No Registrado": (l @fin_periodo_tres)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Cuarto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cuatro == nil)?  "No Registrado": (l @inicio_periodo_cuatro)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cuatro == nil)?  "No Registrado": (l @fin_periodo_cuatro)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Quinto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cinco == nil)?  "No Registrado": (l @inicio_periodo_cinco)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cinco == nil)?  "No Registrado": (l @fin_periodo_cinco)%></td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿Qué requisitos debe cumplir el alumno para realizar sus Estancias Profesionales?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias" style="text-align: justify">
+      <ul type="square" style="margin-left:4em">
+        <li>Haber finalizado el sexto o el octavo semestre.</li>
+        <li>Verificar si cuenta con la garantía de la vigencia de derechos del seguro facultativo ante el Instituto Mexicano del Seguro Social (IMSS).</li>
+        <li>Elegir con base en su perfil de formación académica la empresa, organización o institución de su interés para la realización de sus Estancias Profesionales.</li>
+      </ul>
+      Además, con base en el Reglamento de Alumnos, se encuentran los siguientes requisitos relacionados con estancias profesionales
+      <br>
+      <br>
+      <b>Artículo 25.-</b>De los derechos de los alumnos, en los siguientes incisos:<br>
+      <ol type="a" style="margin-left:4em">
+        <li value="12">Contar con la garantía de la vigencia de derechos del seguro facultativo ante el Instituto Mexicano del Seguro Social (IMSS), que gestionará la Universidad en tiempo y forma. Asimismo, se le garantizará la gestión de la vigencia de estos derechos en la realización de sus Estancias Profesionales, conforme a los lineamientos establecidos por el Departamento de Servicios Escolares. En los casos en que los alumnos cuenten con servicios médicos vigentes (IMSS, ISSSTE, Seguro Popular) por parte de sus padres o tutores, deberán notificar al Departamento de Servicios Escolares su número de afiliación. Para estos casos, la Universidad no gestionará el seguro facultativo ante el IMSS.</li>
+        <li value="14">Elegir con base en su perfil de formación académica la empresa, organización o institución de su interés para la realización de sus Estancias Profesionales. En el caso de los programas de salud se aplicará lo dispuesto en la Ley General de Salud y en los Servicios de Salud del Estado de Oaxaca.</li>
+        <li value="15">Recibir apoyo económico o en especie durante la realización de la Estancia Profesional, siempre y cuando sea una política de la empresa, organización o institución donde la esté realizando.</li>
+      </ol>
+      <b>ARTÍCULO 29.-</b> De las obligaciones de los alumnos, en los siguientes puntos:<br>
+      <ol type="a" style="margin-left:4em">
+        <li value="1">Guardar dentro y fuera del recinto universitario, así como en Prácticas de Campo, Viajes de Prácticas Escolares, Estancias Profesionales y Servicio Social, una conducta digna y respetuosa hacia las autoridades académicas, profesores, compañeros, personal administrativo y trabajadores universitarios en general.</li>
+        <li value="11">Realizar las Estancias Profesionales de acuerdo con la normatividad universitaria.</li>
+        <li value="20">No fumar al interior del campus universitario, ni cuando se encuentre en la práctica de viajes escolares, Estancia Profesional o Servicio Social, ni tampoco al interior del transporte escolar.</li>
+        <li value="21">Realizar de manera oportuna los trámites migratorios necesarios en caso de que el alumno desee hacer su Estancia Profesional en el extranjero.</li>
+        <li value="22">Cumplir con la Estancia Profesional conforme a lo que establece el presente reglamento.</li>
+        <li value="23">Reportar durante los periodos de Estancia Profesional, al Departamento de Servicios Escolares, las actividades realizadas en periodos máximos de tres semanas para cada reporte. El reporte deberá llevar el visto bueno de la Jefatura de Carrera.</li>
+        <li value="24">Entregar al término de la Estancia Profesional, en un plazo no mayor a 10 días hábiles, los documentos indicados en el Artículo 95 del presente reglamento.</li>
+      </ol>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,32 @@
+<div id="PlacaTitulo"><h1>Aspirantes de propedeutico </h1></div>
+<%= form_tag :action=>:datos_prope do%>
+<center>
+  <table class="titled2" style="width: 90%">
+    <thead><th colspan="2" style="text-align: center">Periodo escolar</th></thead>
+    <tr>
+      <td><b>* Periodo</b></td>
+      <td>
+          <%= select :ciclo, :id, @ciclos.collect{|c| [c.ciclo] }, {:include_blank => '--Seleccione el Periodo Escolar--', :selected => @periodo} %>
+      </td>
+    </tr>
+     <tr>
+       <td><b>* Carrera</b></td>
+      <td>
+          <%= select :carrera, :id, @carreras.collect{|ca| [ca.nombre_carrera, ca.id] }, {:include_blank => '--Seleccione la carrera--', :selected => @carrera} %>
+      </td>
+    </tr>
+  </table>
+</center>
+<br>
+</br>
+<table align ="center" style="width: 50%">
+  <tr>
+    <td>
+       <%= link_to image_tag("regresar.png",:title=>"Regresar"),  :controller=>:user_sessions,:action=>:new %>
+       <%= image_submit_tag('buscar.png', :onmouseover => "this.src='/images/buscar_over.png'",:onmouseout  => "this.src='/images/buscar.png'", :title=>"buscar")  %> 
+  </td>
+  </tr>
+</table>
+
+<% end %>
+

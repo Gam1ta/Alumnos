@@ -1,0 +1,106 @@
+<table class="table table-striped ">
+  <thead></thead>
+  <tbody>
+  <tr>
+    <th class="header-table-estancias">¿Qué son las Estancias Profesionales?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      La estancia profesional, de acuerdo al artículo 90 del Reglamento de alumnos (RAL) de la Universidad de Chalcatongo, es la actividad académica obligatoria que deberá realizar el alumno al finalizar el sexto y el octavo semestres, considerándose en cierto sentido una pauta de acción, que permitirá al estudiante la visualización de las actividades académicas que posteriormente debe desarrollar para mejorar sus habilidades y ser competitivo en el ámbito profesional en que actualmente se está preparando.
+      <br><br>
+      <span class="negritaObjetivo">Objetivo</span>
+      <br>
+      La estancia profesional cumple, conforme al artículo 92 del RAL, los siguientes objetivos:
+      <ol type="a" style="margin-left:4em">
+        <li>Fortalecer, desarrollar y consolidar la vinculación de los alumnos con el sector productivo municipal, estatal, nacional e internacional.</li>
+        <li>Propiciar experiencias útiles para la futura integración del alumno en el ámbito laboral.</li>
+        <li>Coadyuvar en la formación del alumno a través del desarrollo de habilidades y capacidades, para desempeñar cualquier tarea relacionada con su perfil de formación académica.</li>
+        <li>Contribuir a la formación integral del alumno, a través de la combinación de conocimientos teóricos y prácticos adquiridos en la Universidad, complementados con actividades en los ámbitos laboral y profesional.</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿Dónde realizarlas?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      Sectores público, social y privado (art. 91 RAL), pudiéndose considerar a instituciones y empresas que provean de la experiencia necesaria antes de que el alumno se vea inmerso en el ámbito laboral, logrando con esto, no sólo que el alumno cumpla sus objetivos, sino además, generar expectativas de actuación respecto de los alumnos egresados de esta Casa de estudios en las instituciones y empresas, lo que permitirá afianzar convenios de colaboración universidad-empresa.
+      <br>
+      Es importante indicar, que la estancia profesional se puede desarrollar en empresas e instituciones nacionales o bien radicadas en el extranjero, por lo que queda bajo responsabilidad del alumno la realización de los trámites migratorios correspondientes.
+    </td>
+  </tr><tr>
+    <th class="header-table-estancias">¿Cuántas horas se deben realizar?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      La estancia profesional se debe desarrollar, como bien lo indica el Reglamento de alumnos (RAL) en su artículo 93, necesariamente en dos períodos con una duración mínima de 280 horas cada uno, y que deben ser ejecutados en dos veranos distintos, sumando de esta forma 560 horas mínimo en total; se considera como excepción a los alumnos que habiendo terminado el plan de estudios, no hayan podido cubrir sus dos períodos de estancia como se indica, pudiendo verse satisfecho el requisito en un solo período con duración de 560 horas.
+      <br>
+      Las jornadas diarias de la estancia profesional serán acordadas entre el Departamento de Servicios Escolares de esta Casa de estudios y la empresa o institución a que acuda el alumno a realizar la prestación.
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Periodos de Estancias Profesionales</th>
+  </tr>
+  <tr>
+    <td>
+      <h4>
+        <span class="text-left negritaObjetivo">Fechas para los Periodos de Estancias Profesionales</span>
+      </h4>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th class="style_periodos">Periodo</th>
+          <th class="style_periodos">Fecha de Inicio</th>
+          <th class="style_periodos">Fecha de Término</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="td_periodos">Primero</td>
+          <td class="td_periodos"><%=(@inicio_periodo_uno == nil)?  "No Registrado": (l @inicio_periodo_uno)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_uno == nil)?  "No Registrado": (l @fin_periodo_uno)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Segundo</td>
+          <td class="td_periodos"><%= (@inicio_periodo_dos == nil)?  "No Registrado": (l @inicio_periodo_dos)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_dos == nil)?  "No Registrado": (l @fin_periodo_dos)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Tercero</td>
+          <td class="td_periodos"><%= (@inicio_periodo_tres == nil)?  "No Registrado": (l @inicio_periodo_tres)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_tres == nil)?  "No Registrado": (l @fin_periodo_tres)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Cuarto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cuatro == nil)?  "No Registrado": (l @inicio_periodo_cuatro)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cuatro == nil)?  "No Registrado": (l @fin_periodo_cuatro)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Quinto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cinco == nil)?  "No Registrado": (l @inicio_periodo_cinco)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cinco == nil)?  "No Registrado": (l @fin_periodo_cinco)%></td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Requisitos </th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      <ul type="square" style="margin-left:4em">
+        <li>Carta de presentación que elabora el Departamento de Servicios Escolares (art. 94 inciso h RAL)</li>
+        <li>Currículum vitae</li>
+        <li>Carnet de citas ante el IMSS</li>
+        <li>Constancia de vigencia de derechos otorgada por el IMSS</li>
+        <li>Constancia de estudios con o sin promedio</li>
+        <li>Credencial oficial con fotografía vigente</li>
+        <li>Comprobante de domicilio</li>
+        <li>Certificado médico</li>
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>

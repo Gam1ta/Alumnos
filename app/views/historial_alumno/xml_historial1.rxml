@@ -1,0 +1,48 @@
+# Cabecera del XML
+xml.instruct!
+# Nivel principal o ROOT "reporte"
+xml.reporte do
+  # Nivel de Informacion Consulta (usuarios)
+	xml.informacion do
+		@materias.each do |i|
+			xml << i.to_xml(
+        :dasherize=>true,
+        :skip_instruct=>true,
+        :only=>[
+          :ciclo,
+          :grupo,
+          :fecha,
+          :semestre,
+          :materia,
+          :p1,
+          :p2,
+          :p3,
+          :final,
+          :e1,
+          :e2,
+          :especial,
+          :creditos,
+          :promedio,
+          :tipo,
+        ],
+        :root=>"materias")
+    end
+
+    xml << @encabezado.to_xml(
+      :dasherize=>true,
+      :skip_instruct=>true,
+      :only=>[
+        :universidad,  
+        :promedio1,  
+        :alumno,
+        :estado,
+        :fecha_temp,
+        :motivo_temp,
+        :fecha_def,
+        :motivo_def,
+        :carrera,
+        :matricula,
+        ],
+      :root=>"encabezado")
+  end
+end

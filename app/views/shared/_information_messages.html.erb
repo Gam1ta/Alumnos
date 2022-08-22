@@ -1,0 +1,17 @@
+
+<% if !mensaje.blank? %>
+   <div class="row">
+     <div class="container">
+       <div class="col-md-6 col-md-offset-3 espacio">
+          <div class="alert alert-info alert-dismissable" role="alert">
+             <button type="button" class="close" data-dismiss="alert"> 
+             <span aria-hiden="true">&times;</span>
+             <span class="sr-only">close</span>
+             </button>
+              <h3 class="text-center"> <%= encabezado || "Información" %> </h3>
+              <p class="text-center"> <%= mensaje %> </p>
+           </div>
+       </div>
+     </div>
+    </div>
+<% end %>

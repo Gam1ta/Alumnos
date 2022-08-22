@@ -1,0 +1,58 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+  <%= render "shared/error_messages", :target => @user %>
+<%= form_tag :controller=>:users, :action => :actualizar1 do %>
+
+  <div id="PlacaTitulo">
+    <h1>Editar Usuario</h1>
+  </div>
+  <br>
+  <p id="notice"><%= notice %></p>
+  <table class="titled2">
+    <thead><td colspan="0"> Datos de Usuario </td></thead>
+    <tr>
+      <td><b>Nombre de Usuario:</b></td>
+      <td><%= text_field :user,:login %></td>
+    </tr>
+    <tr>
+      <td><b>Correo Electrónico:</b></td>
+      <td><%=  text_field :user,:email %></td>
+    </tr>
+    <tr>
+      <td><b>Rol:</b></td>
+      <td>
+
+        <input type="radio" id="role_ids" name="role_ids" checked="true" value="<%= @user.role.id %>"</input><%= @user.role.name %>
+
+      </td>
+    </tr>
+    <tr>
+      <td><b>Campus:</b></td>
+      <td>
+        <%= @user.campus.nombre %>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Contraseña:</b></td>
+      <td><%= password_field :user,:password %></td>
+    </tr>
+    <tr>
+      <td><b>Confirmación de Contraseña:</b></td>
+      <td><%= password_field :user,:password_confirmation %></td>
+    </tr>
+  </table>
+
+  <div id="menu_down">
+
+    <ul id="menu">
+      <li>
+        <%= image_submit_tag 'guardar.png', :onmouseover => "this.src='/images/guardar_over.png'",:onmouseout  => "this.src='/images/guardar.png'", :id => "Guardar", :title=>"Guardar"  %>
+      </li>
+    </ul>
+  </div>
+<%end%>
+<script type="text/javascript">
+  document.getElementById("user_full_name").focus();
+</script>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<reporte>
+−
+<informacion>
+−
+<calendario>
+<aula-esp nil="true"/>
+<aula-p1>A1</aula-p1>
+<fecha-ext1 nil="true"/>
+<aula-Or nil="true"/>
+<fecha-p1>2011-04-04</fecha-p1>
+<fecha-esp nil="true"/>
+<hora-p2 nil="true"/>
+<hora-ext2 nil="true"/>
+<fecha-p2 nil="true"/>
+<aula-p2 nil="true"/>
+<aula-ext2 nil="true"/>
+<fecha-p3 nil="true"/>
+<hora-p3 nil="true"/>
+<materia>Sistemas Operativos I</materia>
+<fecha-ext2 nil="true"/>
+<fecha-or nil="true"/>
+<hora-ext1 nil="true"/>
+<aula-p3 nil="true"/>
+<hora-esp nil="true"/>
+<hora-p1>10:00-11:00</hora-p1>
+<aula-ext1 nil="true"/>
+<hora-Or nil="true"/>
+</calendario>
+−
+<calendario>
+<aula-esp nil="true"/>
+<aula-p1>A1</aula-p1>
+<fecha-ext1 nil="true"/>
+<aula-Or nil="true"/>
+<fecha-p1>2011-04-05</fecha-p1>
+<fecha-esp nil="true"/>
+<hora-p2>09:00-10:00</hora-p2>
+<hora-ext2 nil="true"/>
+<fecha-p2>2011-05-16</fecha-p2>
+<aula-p2>A2</aula-p2>
+<aula-ext2 nil="true"/>
+<fecha-p3 nil="true"/>
+<hora-p3 nil="true"/>
+<materia>Ingeniería en Software II</materia>
+<fecha-ext2 nil="true"/>
+<fecha-or nil="true"/>
+<hora-ext1 nil="true"/>
+<aula-p3 nil="true"/>
+<hora-esp nil="true"/>
+<hora-p1>10:00-11:00</hora-p1>
+<aula-ext1 nil="true"/>
+<hora-Or nil="true"/>
+</calendario>
+−
+<encabezado>
+<matricula>2008060128</matricula>
+<alumno>LUNA LOPEZ FRANCISCO </alumno>
+<carrera>LICENCIATURA EN INFORMATICA</carrera>
+<universidad>UNIVERSIDAD DE LA SIERRA SUR</universidad>
+</encabezado>
+</informacion>
+</reporte>

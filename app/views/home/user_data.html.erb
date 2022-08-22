@@ -1,0 +1,93 @@
+
+<div class="">
+
+  <% if @usuario %>
+    <% if @usuario.alumno.blank?  %>
+      <%= render :partial => "shared/messages", :locals => { :msg => "El usuario no esta registrado en el sistema", :class_name => "error" } %>
+    <% else %>
+
+
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2  col-lg-6 col-lg-offset-3 espacio">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4>Información del Usuario</h4>
+            </div>
+
+            <div class="panel-body">
+              <div class="foto center-block">
+                <i class="glyphicon glyphicon-user"></i>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+                  <div class="table-responsive">
+                    <table class="table table-user-information table-bordered table-list">
+                      <tbody>
+                        <tr>
+                          <th class="info">Nombre del Alumno:</th>
+                          <td><%= capitalize_each_word @usuario.alumno.full_name %></td>
+                        </tr>
+
+                        <tr>
+                          <th class="info">Matrícula:</th>
+                          <td><%= @usuario.alumno.matricula %></td>
+                        </tr>
+
+                        <tr>
+                          <th class="info">Carrera:</th>
+                          <td><%= capitalize_each_word  @usuario.alumno.get_nombre_carrera %></td>
+                        </tr>
+                        <% if @last_inscripcion.present? %>
+                          <tr>
+                            <th class="info">Grupo Actual:</th>
+                            <td><%=  Grupo.find(@last_inscripcion[:grupo_id]).nombre %> </td>
+                          </tr>
+
+                          <tr>
+                            <th class="info">Periodo Escolar:</th>
+                            <td><%= @last_inscripcion[:ciclo] %> </td>
+                          </tr>
+
+                          <tr>
+                            <th class="info">Beca:</th>
+                            <td><%= !@last_inscripcion[:beca].nil? ? @last_inscripcion[:beca].to_s + "%" : "Sin Beca Asignada"%></td>
+                          </tr>
+                        <% end %>
+                        <tr>
+                          <th class="info">Número de Seguro Social:</th>
+                          <td><%= @usuario.alumno.nss.to_s %></td>
+                        </tr>
+                        <tr>
+                          <th class="info">Tutor Profesor:</th>
+                          <td><%= @profesor.full_name %></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="panel-footer">
+             <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class='text-right'><%= link_to 'Cambiar Contraseña', password_change_home_index_path, :class => "btn btn-info"%></div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class='text-left'><%= link_to 'Ver todas las Inscripciones', show_inscripciones_home_index_path , :class => "btn btn-info"%></div>
+              </div>
+             </div>
+            </div>
+
+          </div>
+        </div>
+      </div>  
+    <% end %>
+  <% else %>
+    <%= link_to "Página de Ingreso", new_user_session_path %>
+  <% end %>
+
+
+
+</div>

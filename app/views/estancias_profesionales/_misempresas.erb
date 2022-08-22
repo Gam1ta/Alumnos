@@ -1,0 +1,100 @@
+<table class="table table-striped ">
+  <thead></thead>
+  <tbody>
+  <tr>
+    <th class="header-table-estancias"><h4>Opciones de Empresas para Estancias - PERIODO <%= @periodo %></h4></th>
+  </tr>
+  </tbody>
+</table>
+
+<span style="float: right; <%= 'color:red;' if @periodo_valido_opciones == false %>">
+  <h4>Periodo de registro de opciones: <%= (@fecha_opciones_inicio == nil) ? "No Registrado": (l @fecha_opciones_inicio) %> - <%=(@fecha_opciones_fin == nil) ? "No Registrado": (l @fecha_opciones_fin) %></h4>
+</span>
+<br/>
+<br/>
+
+<% if @empresas_opciones.size > 0 %>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th style="width: 20%" class="header-table-estancias">Nombre</th>
+				<th style="width: 10%" class="header-table-estancias">Tipo</th>
+				<th style="width: 20%" class="header-table-estancias">Contacto</th>
+				<th style="width: 20%" class="header-table-estancias">Cargo</th>
+				<th style="width: 15%" class="header-table-estancias">Teléfono</th>
+				<th style="width: 15%" class="header-table-estancias">Ciudad</th>
+				<th style="width: 10%" class="header-table-estancias">Correo</th>
+				<th style="width: 10%" class="header-table-estancias">Estatus</th>
+				<% if @periodo_valido_opciones == true %>
+					<th style="width: 10%" class="header-table-estancias"></th>
+					<th style="width: 10%" class="header-table-estancias"></th>
+					<th style="width: 10%" class="header-table-estancias"></th>
+				<% else %>
+					<th class="header-table-estancias"></th><th class="header-table-estancias"></th><th class="header-table-estancias"></th>
+				<% end %>
+			</tr>
+		</thead>
+		<tbody>	
+			<% @empresas_opciones.each do |opcion| %>
+				<tr class="table_tipoB_hover">
+				  <td style="width: 20%; text-align: left"><%= opcion[:empresa].nombre %></td>
+				  <td style="width: 10%; text-align: left"><%= opcion[:empresa].sector %></td>
+				  <td style="width: 20%; text-align: left"><%= opcion[:empresa].contacto_nombre %></td>
+				  <td style="width: 20%; text-align: left"><%= opcion[:empresa].contacto_cargo %></td>
+				  <td style="width: 15%; text-align: left"><%= opcion[:empresa].telefono %></td>
+				  <td style="width: 15%; text-align: left"><%= opcion[:empresa].ciudad %></td>
+				  <td style="width: 10%; text-align: left"><%= opcion[:empresa].contacto_correo %></td>
+				  
+				  <% color = "green" if opcion[:estatus] == "APROBADA" %>
+				  <% color = "red" if opcion[:estatus] == "RECHAZADA" %>
+				  <% color = "blue" if opcion[:estatus] == "SELECCIONADA" %>
+				  
+				  <td style="width: 10%; text-align: left; color: <%= color %>;">
+						<b><%= opcion[:estatus] %></b><br/>
+						<%= opcion[:fecha].day %>-<%= opcion[:fecha].month %>-<%= opcion[:fecha].year %>
+						<br/>
+						<%= opcion[:fecha].hour %>:<%= opcion[:fecha].min %>:<%= opcion[:fecha].sec %> hrs.
+				  </td>
+				  
+				  <% if @existe_seleccionada == false && @periodo_valido_opciones == true && (opcion[:estatus] == "REGISTRADA" || opcion[:estatus] == "RECHAZADA" || opcion[:estatus] == "APROBADA") %>
+					  <td style="width: 10%">
+						<%= link_to "Eliminar", {:action => :del_empresa, :id => opcion[:id]}, 
+							:data => {:confirm => "¿Estás seguro de eliminar esta empresa de tus opciones?"},
+							:title => "Eliminar de mis opciones de Empresas",
+               :class=>"btn btn-danger"%>
+					  </td>
+					  <% if opcion[:estatus] == "REGISTRADA" %>
+						  <td style="width: 10%">
+							<%= link_to "Enviar", {:action => :send_opcion, :id => opcion[:id]}, 
+								:data => {:confirm => "¿Estas seguro de enviar esta opción?"},
+								:title => "Enviar opción a Coordinación de Estancias",
+                 :class=>"btn btn-info"%>
+						  </td>
+					  <% else %>
+							<td></td>
+					  <% end %>
+					  
+					  <% if opcion[:estatus] == "APROBADA" %>
+						  <td style="width: 10%">
+							<%= link_to "Seleccionar", {:action => :select_opcion, :id => opcion[:id]}, 
+								:data => {:confirm => "¿Estas seguro de seleccionar esta opción para realizar sus estancias?"},
+								:title => "Seleccionar opción como la definitiva",
+                :class=>"btn btn-success"%>
+						  </td>
+					  <% else %>
+							<td></td>
+					  <% end %>
+				  <% else %>
+					<td></td><td></td><td></td>
+				  <% end %>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+<% else %>
+
+		<span>
+      <h4 class="text-center">No has agregado ninguna empresa a tus opciones</h4>
+    </span>
+
+<% end %>

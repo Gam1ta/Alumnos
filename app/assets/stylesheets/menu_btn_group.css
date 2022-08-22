@@ -1,0 +1,88 @@
+/* 
+Inspired by http://dribbble.com/shots/890759-Ui-Kit-Metro/attachments/97174
+*/
+*, *:before, *:after {
+  /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+  -webkit-box-sizing: border-box; 
+
+  /* Firefox (desktop or Android) 28- */
+  -moz-box-sizing: border-box;
+
+  /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+  box-sizing: border-box;
+}
+
+
+
+.btn-nav {
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.btn-nav:hover {
+    background-color: #e7e7e7;
+    cursor: pointer;
+    -webkit-transition: color .5s; /* For Safari 3.1 to 6.0 */
+    transition: color .5s;
+}
+
+.btn-nav.active {
+    background-color: #E7E7E7;
+    padding: 6px 0 6px 0;
+    border-left: 0;
+    border-right: 0;
+
+}
+
+
+.btn-nav .fa {
+    padding-top: 12px;
+	font-size: 40px;
+}
+
+.btn-nav.active p {
+    margin-bottom: 8px;
+}
+
+@-webkit-keyframes pulsate {
+ 50% { color: #000; }
+}
+
+@keyframes pulsate {
+ 50% { color: #000; }
+}
+
+@media (max-width: 1200px) {
+    span.textos_menu {
+
+       color: #1a5688;
+       font-size: 13px;
+       text-align: center;
+       
+   }
+}
+
+
+
+@media (max-width: 500px) {
+    .btn-nav .fa{
+        padding-top: 8px;
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .btn-nav .fa{
+        padding-top: 8px;
+        font-size: 25px;
+    }
+
+}
+
+
+

@@ -1,0 +1,11 @@
+<% if target.errors.any? %>
+  <div id="wrapper_error">
+    <% impidio_impidieron = target.errors.count > 1 ? 'impidieron' : 'impidió' %>
+    <h2> <%= pluralize(target.errors.count, "error") %> <%= impidio_impidieron %>  que el registro se guardara: </h2>
+    <ul>
+      <% target.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

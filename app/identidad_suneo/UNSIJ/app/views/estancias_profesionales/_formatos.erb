@@ -1,0 +1,102 @@
+<table class="table table-striped break_space">
+	<thead></thead>
+	<tbody>
+    <tr>
+      <th colspan="2" class="header-table-estancias">
+        <h4>Formatos para Estancias</h4>
+      </th>
+    </tr>
+
+		<tr >
+			<td class="table-estancias-formatos" align="center">
+        <b>Formato de reporte semanal</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "reporte_semanal"},
+                  :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Formato de reporte de evaluación final</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "reporte_evaluacion"},
+                 :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Informe final</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "informe_final"},
+                  :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b >Solicitud para realizar Estancias Profesionales</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "solicitud_estancias"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Solicitud de oficio de aceptación de E.P.</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "solicitud_oficio_aceptacion"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Oficio de Liberación de Estancia Profesional</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "oficio_liberacion"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Carta solicitud de Estancia Profesional</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "carta_solicitud"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+    <tr>
+			<td class="table-estancias-formatos">
+        <b>Carta de Presentación</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "carta_presentacion"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+    <tr>
+			<td class="table-estancias-formatos">
+        <b>Constancia de Estancias Profesionales</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "constancia"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+	</tbody>
+</table>

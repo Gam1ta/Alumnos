@@ -1,0 +1,35 @@
+<h1>Aviso</h1>
+<h2>El alumno a un no se ha asignado a ningun grupo</h2>
+<% if current_user %>
+  <%#= "Usuario actual: #{current_user.login} (#{current_user.email})(#{current_user.id})" %>
+  <%@alumno = Alumno.where("user_id=?",current_user.id.to_i).first%>
+
+  <table class="titled2">
+    <thead>
+        <th colspan="0">Datos del Alumno  </th> <th colspan="0">Datos del Alumno  </th>
+    </thead>
+
+    <tr>
+      <td>Nombre: </td>
+      <td><%=  @alumno.nombre.to_s + " " +  @alumno.apellido_paterno.to_s + " " +  @alumno.apellido_materno.to_s%></td>
+    </tr>
+
+    <thead>
+        <th colspan="0">Datos del Alumno  </th> <th colspan="0">Datos del Alumno  </th>
+    </thead>
+    
+    <tr>
+      <td>Carrera: </td><%@carrera = Carrera.where("id=?",@alumno.carrera_id.to_i).first%>
+      <td><%= @carrera.nombre_carrera.to_s %></td>
+    </tr>
+    
+    <thead>
+        <th colspan="0">Datos del Alumno  </th> <th colspan="0">Datos del Alumno  </th>
+    </thead>
+    
+
+    <thead>
+        <th colspan="0">Datos del Alumno  </th> <th colspan="0">Datos del Alumno  </th>
+    </thead>
+</table>
+<%end%>

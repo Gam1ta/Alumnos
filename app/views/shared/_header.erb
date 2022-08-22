@@ -1,0 +1,51 @@
+
+<!--cabecera de la aplicacion web, logo y nombre del portal-->
+<header class="container">
+  <div class="row">
+
+    <div class="col-lg-3 col-md-3 col-sm-6">
+      <%=  image_tag(("seres-03.png"), :class => "image-seres")%>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6">
+      <p class="text-info portal_alumnos text-left">| Portal de Alumnos</p>
+    </div>
+
+    <!--<div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="pull-right espacio_botones">
+        <%#= link_to user_session_path(current_user) , :class => "btn btn-sm btn-default", method: :delete do %>
+          <span class="fa fa-sign-out"></span> <span class="hidden-xs text-user"> Cerrar Sesión</span>
+        <%# end %>
+      </div>
+
+      <div class="pull-right espacio_botones">
+        <%#= link_to user_data_home_index_path() , :class => "btn btn-sm btn-info" do %>
+          <span class="glyphicon glyphicon-user"></span>
+          <span class="hidden-xs text-user"> <%#= "#{current_user.login.to_s}"%> </span>
+        <%#end %>
+      </div>
+    </div>-->
+
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="pull-right espacio_botones">
+        <%= link_to user_session_path(current_user) , :class => "btn btn-sm", method: :delete do %>
+          <span class="fa fa-sign-out close_icon_header"></span> <span class="hidden-xs close-session"> Cerrar Sesión</span>
+        <% end %>
+      </div>
+
+      <div class="pull-right espacio_botones">
+        <%= link_to root_path, :class => "btn btn-sm"  do %>
+          <span class="fa fa-home home_icon_header"></span> <span class="hidden-xs close-session"> Inicio</span>
+        <% end %>
+      </div>
+
+      <div class="pull-right espacio_botones">
+        <%= link_to user_data_home_index_path() , :class => "btn btn-sm" do %>
+          <span class="fa fa-user user_icon_header"></span>
+          <span class="hidden-xs text-user"><%= capitalize_each_word @usuario.alumno.full_name %> </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</header>
+

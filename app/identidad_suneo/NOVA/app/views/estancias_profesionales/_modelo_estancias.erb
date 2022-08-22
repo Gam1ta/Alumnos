@@ -1,0 +1,97 @@
+<table class="table table-striped ">
+  <thead></thead>
+  <tbody>
+  <tr>
+    <th class="header-table-estancias">¿Qué son las Estancias Profesionales?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      Es la actividad académica obligatoria que deberá realizar el alumno al finalizar el sexto y el octavo semestre, siendo el primer paso de un estudiante en el mercado laboral, donde pueden poner en práctica sus habilidades desarrolladas en clase, aplicando sus conocimientos y aprendiendo más sobre el área en que realizan su estancia.
+      <br>
+      Para una organización o empresa, ofrecer una práctica profesional constituye la oportunidad de formar empleados que en un futuro podrían incorporarse a su equipo de trabajo.
+      <br><br>
+      <span class="negritaObjetivo">Objetivos de las Estancias Profesionales</span>
+      <br>De acuerdo al artículo 91 del capítulo II de la Estancia Profesional, se tiene como objetivo:<br>
+      <ol type="a" style="margin-left:4em">
+        <li>Fortalecer, desarrollar y consolidad la vinculación de los alumnos con el sector productivo municipal, estatal, nacional e internacional.</li>
+        <li>Propiciar experiencias útiles para la futura integración del alumno en el ámbito laboral.</li>
+        <li>Coadyuvar en la formación del alumno a través del desarrollo de habilidades y capacidades, para desempeñar cualquier tarea relacionada con su perfil de formación académica.</li>
+        <li>Contribuir a la formación integral del alumno, a través de la combinación de conocimientos teóricos y prácticos adquiridos en la Universidad, complementados con actividades en los ámbitos laboral y profesional.</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿En qué sectores se pueden realizar?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      En los sectores público, social o privado.
+      <br>
+  </tr><tr>
+    <th class="header-table-estancias">¿Cuántas horas y periodos se deben cumplir?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      La estancia profesional comprende dos periodos durante el verano, en cada periodo deberán cubrir como mínimo 280 horas, en total se deberán cubrir 560 horas por los dos periodos. Sólo se podrá realizar una estancia por periodo de verano.
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Periodos de Estancias Profesionales</th>
+  </tr>
+  <tr>
+    <td>
+      <h4>
+        <span class="text-left negritaObjetivo">Fechas para los Periodos de Estancias Profesionales</span>
+      </h4>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th class="style_periodos">Periodo</th>
+          <th class="style_periodos">Fecha de Inicio</th>
+          <th class="style_periodos">Fecha de Término</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="td_periodos">Primero</td>
+          <td class="td_periodos"><%=(@inicio_periodo_uno == nil)?  "No Registrado": (l @inicio_periodo_uno)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_uno == nil)?  "No Registrado": (l @fin_periodo_uno)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Segundo</td>
+          <td class="td_periodos"><%= (@inicio_periodo_dos == nil)?  "No Registrado": (l @inicio_periodo_dos)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_dos == nil)?  "No Registrado": (l @fin_periodo_dos)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Tercero</td>
+          <td class="td_periodos"><%= (@inicio_periodo_tres == nil)?  "No Registrado": (l @inicio_periodo_tres)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_tres == nil)?  "No Registrado": (l @fin_periodo_tres)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Cuarto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cuatro == nil)?  "No Registrado": (l @inicio_periodo_cuatro)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cuatro == nil)?  "No Registrado": (l @fin_periodo_cuatro)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Quinto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cinco == nil)?  "No Registrado": (l @inicio_periodo_cinco)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cinco == nil)?  "No Registrado": (l @fin_periodo_cinco)%></td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿Qué requisitos debe cumplir el alumno para realizar sus Estancias Profesionales?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      <ul type="square" style="margin-left:4em">
+        <li>Haber finalizado el sexto y el octavo semestre; por el caso del área de la salud, la estancia profesional consiste en prácticas que forman parte de los planes de estudios, que se rigen de acuerdo a las Normas Oficiales Mexicanas para la utilización de campos clínicos para las clínicas y servicio social en el área de la salud, emitidas por la Secretaría de Salud.</li>
+        <li>Iniciar en tiempo y forma el proceso de estancias profesionales, en el periodo que corresponda.</li>
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>

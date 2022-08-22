@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<reporte> 
+  <informacion> 
+<materias> 
+  <extra2></extra2> 
+  <p1>5.0</p1> 
+  <materia>DISE&#209;O ESTRUCTURADO DE ALGORITMOS</materia> 
+  <grupo>101</grupo> 
+  <espe></espe> 
+  <ciclo>2009-2010A</ciclo> 
+  <p3>9.3</p3> 
+  <p2>6.4</p2> 
+  <extra1></extra1> 
+  <promedio>8.2</promedio> 
+</materias> 
+<materias> 
+  <extra2></extra2> 
+  <p1>9.1</p1> 
+  <materia>ELECTR&#211;NICA I</materia> 
+  <grupo>101</grupo> 
+  <espe></espe> 
+  <ciclo>2009-2010A</ciclo> 
+  <p3>9.4</p3> 
+  <p2>8.6</p2> 
+  <extra1></extra1> 
+  <promedio>9.4</promedio> 
+</materias> 
+<materias> 
+  <extra2></extra2> 
+  <p1>8.3</p1> 
+  <materia>L&#211;GICA MATEM&#193;TICA</materia> 
+  <grupo>101</grupo> 
+  <espe></espe> 
+  <ciclo>2009-2010A</ciclo> 
+  <p3>8.6</p3> 
+  <p2>9.0</p2> 
+  <extra1></extra1> 
+  <promedio>9.2</promedio> 
+</materias> 
+<materias> 
+  <extra2></extra2> 
+  <p1>6.0</p1> 
+  <materia>HISTORIA DEL PENSAMIENTO FILOS&#211;FICO</materia> 
+  <grupo>101</grupo> 
+  <espe></espe> 
+  <ciclo>2009-2010A</ciclo> 
+  <p3>8.6</p3> 
+  <p2>7.1</p2> 
+  <extra1></extra1> 
+  <promedio>7.1</promedio> 
+</materias> 
+<materias> 
+  <extra2></extra2> 
+  <p1>8.0</p1> 
+  <materia>INTRODUCCI&#211;N A LA INFORM&#193;TICA</materia> 
+  <grupo>101</grupo> 
+  <espe></espe> 
+  <ciclo>2009-2010A</ciclo> 
+  <p3>8.8</p3> 
+  <p2>9.0</p2> 
+  <extra1></extra1> 
+  <promedio>8.9</promedio> 
+</materias> 
+<encabezado> 
+  <alumno>04010005  JORGE DIEGO MENDOZA </alumno> 
+  <grupo>101</grupo> 
+  <universidad>UNIVERSIDAD DE LA CA&#209;ADA</universidad> 
+  <ciclo>2009-2010A</ciclo> 
+</encabezado> 
+  </informacion> 
+</reporte> 

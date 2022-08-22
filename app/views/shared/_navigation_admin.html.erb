@@ -1,0 +1,26 @@
+
+<!--Menú de Navegación-->
+<div class="container">
+  <div class="row ">
+    <div class="btn-group btn-group-justified well_menu">
+      <div class="btn-group">
+        <%= link_to( admin_crear_cuenta_path, :class => 'btn btn-nav' + active('Ver')) do %>
+          <i class="fa fa-list-alt"></i><span class="textos_menu hidden-sm hidden-xs"> Crear Cuenta </span>
+        <% end %>
+      </div>
+
+      <div class="btn-group">
+        <%= link_to(admin_reiniciar_cuenta_path, :class => 'btn btn-nav' + active('Editar')) do %>
+          <i class="fa fa-list-alt"></i><span class="textos_menu hidden-sm hidden-xs"> Reiniciar Cuenta </span>
+        <% end %>
+      </div>
+
+      <div class="btn-group">
+        <%= link_to(admin_reset_password_path, :class => 'btn btn-nav' + active('Crear')) do %>
+          <i class="fa fa-list-alt"></i><span class="textos_menu hidden-sm hidden-xs"> Cambiar Contraseña </span>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

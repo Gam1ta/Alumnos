@@ -1,0 +1,17 @@
+<div class="espacio">
+  <div class="well">
+    <div class="row form-horizontal">
+      <%= form_tag({:action => 'setear_datos_del_alumno', :controller => "admin"},  :id => "reinicia_cuenta_form", :multipart => true) do %>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Matrícula:</label>
+          <div class="col-sm-8">
+            <%= text_field_tag :matricula, nil, :maxlength => 18, :size => 25, :class => "form-control" %>
+          </div>
+          <div class="col-sm-2">
+            <%= submit_tag "Reiniciar", :id => 'enviar_matricula', :name => 'Btn_reinicia', :class => "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<table class="table table-striped break_space">
+	<thead></thead>
+	<tbody>
+    <tr>
+      <th colspan="2" class="header-table-estancias">
+        <h4>Formatos para Estancias</h4>
+      </th>
+    </tr>
+
+		<tr >
+			<td class="table-estancias-formatos" align="center">
+        <b>Formato de reporte quincenal</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "reporte_quincenal"},
+                  :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Formato de reporte de evaluación final</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "reporte_evaluacion"},
+                 :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b >Cuestionario de resultados</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "cuestionario_resultados"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+	</tbody>
+</table>

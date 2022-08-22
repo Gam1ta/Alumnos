@@ -1,0 +1,121 @@
+/** {font-family:sans-serif; padding:0px; margin:0px;}*/
+
+body
+{
+background-color:#f4fedc;	
+background: transparent url(../images/bg_body.JPG) repeat-x top !important ;
+}
+
+#wrapper_login {
+position:absolute;
+left:50%;
+width:800px;
+margin-top:76px;
+margin-left:-400px;
+height:600px;
+background: transparent url(../images/bg_alumnos.png) no-repeat top center !important ;
+
+}
+#content_logotype {
+	margin: 0px 0px 0px 0px;
+	width:800px;
+	height:80px;
+	}
+#logotype {
+	margin: 40px 0px 0px 0px;
+	width:800px;
+	height:60px;
+	padding-top:0px;
+	background: transparent url(../images/logotype_log.png) no-repeat center !important ;
+	}
+#bglogin_content {
+	margin-top: 40px;
+	padding-top:110px!important;
+	width: 552px;
+	height:215px!important;
+	
+	overflow:visible;
+}	
+#login_content {
+	margin-top: 40px auto;
+	width: 452px;
+	height:200px!important;
+	text-align: center;
+	padding-top:45px;
+	padding-left:170px;
+	padding-right:50px;
+	color:#4c0008;
+	font-size:12px!important;
+	text-align: center;
+}
+table.form{width:350px;}
+
+table.form tr td.name{
+    height:28px;
+    border-width: 0px;
+}
+
+.form p
+{padding-left: 20px;padding-top:0px;padding-right:5px;}
+
+table.form tr td.passwd{
+    height:28px;
+    border-width:0px; 
+}
+
+table.form tr td.input{
+	width:auto;
+	padding-top:0px;
+        text-align: left;
+        height:30px!important; 
+	
+        
+}
+
+table.form input {
+	color:#555559;
+	background:#fff;
+	border:1px solid #4c0008;
+}
+
+.okbutton input {
+background:url(../images/aceppt.png) no-repeat center bottom ;
+margin-top: 12px;
+padding-top:25px;
+cursor:pointer;
+width: 90px;
+height: 34px;
+border: none;
+}
+
+.okbutton input:hover{
+background:url(../images/aceppt_hover.png) no-repeat;
+cursor:pointer;
+width: 90px;
+height: 34px;
+border: none;
+}
+
+#footer{
+	margin: 25px 0px 0px 0px;
+	width: 800px;
+	height:60px!important;
+	padding-top:85px;
+	background: transparent url(../images/footer_logginc.png) no-repeat center  !important ; 
+}	
+.kadalink
+{
+float: right;
+width: 116px;
+height: 35px;
+border: none;
+margin: 0px auto;
+padding: 20px 0px 0px 0px;
+}
+.kadalink img
+{
+border: none;
+width: 116px;
+height:35px;
+padding-left: 5px;
+}

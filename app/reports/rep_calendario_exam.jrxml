@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rep_calendario_exam" pageWidth="675" pageHeight="900" columnWidth="635" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="81"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="xPath">
+		<![CDATA[/reporte/informacion/calendario]]>
+	</queryString>
+	<field name="aula-esp" class="java.lang.String">
+		<fieldDescription><![CDATA[aula-esp]]></fieldDescription>
+	</field>
+	<field name="aula-p1" class="java.lang.String">
+		<fieldDescription><![CDATA[aula-p1]]></fieldDescription>
+	</field>
+	<field name="fecha-ext1" class="java.lang.String">
+		<fieldDescription><![CDATA[fecha-ext1]]></fieldDescription>
+	</field>
+	<field name="aula-Or" class="java.lang.String">
+		<fieldDescription><![CDATA[aula-Or]]></fieldDescription>
+	</field>
+	<field name="fecha-p1" class="java.lang.String">
+		<fieldDescription><![CDATA[fecha-p1]]></fieldDescription>
+	</field>
+	<field name="fecha-esp" class="java.lang.String">
+		<fieldDescription><![CDATA[fecha-esp]]></fieldDescription>
+	</field>
+	<field name="hora-p2" class="java.lang.String">
+		<fieldDescription><![CDATA[hora-p2]]></fieldDescription>
+	</field>
+	<field name="hora-ext2" class="java.lang.String">
+		<fieldDescription><![CDATA[hora-ext2]]></fieldDescription>
+	</field>
+	<field name="fecha-p2" class="java.lang.String">
+		<fieldDescription><![CDATA[fecha-p2]]></fieldDescription>
+	</field>
+	<field name="aula-p2" class="java.lang.String">
+		<fieldDescription><![CDATA[aula-p2]]></fieldDescription>
+	</field>
+	<field name="aula-ext2" class="java.lang.String">
+		<fieldDescription><![CDATA[aula-ext2]]></fieldDescription>
+	</field>
+	<field name="fecha-p3" class="java.lang.String">
+		<fieldDescription><![CDATA[fecha-p3]]></fieldDescription>
+	</field>
+	<field name="hora-p3" class="java.lang.String">
+		<fieldDescription><![CDATA[hora-p3]]></fieldDescription>
+	</field>
+	<field name="materia" class="java.lang.String">
+		<fieldDescription><![CDATA[materia]]></fieldDescription>
+	</field>
+	<field name="fecha-ext2" class="java.lang.String">
+		<fieldDescription><![CDATA[fecha-ext2]]></fieldDescription>
+	</field>
+	<field name="fecha-or" class="java.lang.String">
+		<fieldDescription><![CDATA[fecha-or]]></fieldDescription>
+	</field>
+	<field name="hora-ext1" class="java.lang.String">
+		<fieldDescription><![CDATA[hora-ext1]]></fieldDescription>
+	</field>
+	<field name="aula-p3" class="java.lang.String">
+		<fieldDescription><![CDATA[aula-p3]]></fieldDescription>
+	</field>
+	<field name="hora-esp" class="java.lang.String">
+		<fieldDescription><![CDATA[hora-esp]]></fieldDescription>
+	</field>
+	<field name="hora-p1" class="java.lang.String">
+		<fieldDescription><![CDATA[hora-p1]]></fieldDescription>
+	</field>
+	<field name="aula-ext1" class="java.lang.String">
+		<fieldDescription><![CDATA[aula-ext1]]></fieldDescription>
+	</field>
+	<field name="hora-Or" class="java.lang.String">
+		<fieldDescription><![CDATA[hora-Or]]></fieldDescription>
+	</field>
+	<field name="matricula" class="java.lang.String">
+		<fieldDescription><![CDATA[/reporte/informacion/encabezado/matricula]]></fieldDescription>
+	</field>
+	<field name="alumno" class="java.lang.String">
+		<fieldDescription><![CDATA[/reporte/informacion/encabezado/alumno]]></fieldDescription>
+	</field>
+	<field name="carrera" class="java.lang.String">
+		<fieldDescription><![CDATA[/reporte/informacion/encabezado/carrera]]></fieldDescription>
+	</field>
+	<field name="universidad" class="java.lang.String">
+		<fieldDescription><![CDATA[/reporte/informacion/encabezado/universidad]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="129" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="109" width="156" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATERIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="109" width="65" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Double"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARCIAL 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="109" width="65" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Double"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARCIAL 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="109" width="63" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Double"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORDINARIO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="102" y="5" width="519" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{universidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="88" width="333" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{carrera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="67" width="333" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="46" width="333" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{alumno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="129" y="87" width="69" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARRERA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="67" width="69" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATRICULA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="46" width="70" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALUMNO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="25" width="519" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE CALENDARIO DE EXAMENES]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="5" width="102" height="98"/>
+				<imageExpression class="java.lang.String"><![CDATA["../../public/images/suneo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="305" y="109" width="64" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Double"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARCIAL 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="109" width="65" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Double"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[EXTRA  1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="509" y="109" width="65" height="19"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Double"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[EXTRA 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="576" y="108" width="57" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ESPECIAL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="128" width="653" height="1"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="62" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="161" y="42" width="65" height="20"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{aula-p1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="161" y="22" width="65" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hora-p1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="232" y="22" width="65" height="20"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hora-p2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="3" width="161" height="20"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{materia}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="232" y="42" width="65" height="20"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{aula-p2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="305" y="22" width="64" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hora-p3}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="305" y="42" width="64" height="20"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{aula-p3}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="377" y="22" width="63" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hora-Or}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="377" y="42" width="63" height="20"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{aula-Or}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="161" y="2" width="65" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha-p1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="232" y="2" width="65" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha-p2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="305" y="2" width="64" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha-p3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="377" y="2" width="63" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha-or}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="61" width="655" height="1"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="509" y="23" width="65" height="19"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hora-ext2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="440" y="23" width="68" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hora-ext1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="576" y="22" width="57" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hora-esp}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="443" y="3" width="65" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha-ext1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="509" y="3" width="65" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha-ext2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="576" y="3" width="57" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fecha-esp}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="576" y="43" width="57" height="18"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{aula-esp}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="440" y="41" width="68" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{aula-ext1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="509" y="42" width="65" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{aula-ext2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

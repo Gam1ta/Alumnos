@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 espacio">
+    <div class="well">
+      <h4>Consulta de Informacion de Adeudos</h4>
+      <hr>
+      <div class="panel panel-adeudo panel-table">
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th class="th-adeudo">Concepto</th>
+                  <th class="th-adeudo">Importe</th>
+                  <th class="th-adeudo">Mes</th>
+                  <th class="th-adeudo">Año</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% unless @debits.blank? %>
+                  <%
+                    @debits.each do |debit|
+                      fecha = debit.created_at
+                      fecha = fecha.to_date
+                      month = fecha.strftime('%m')
+                      month = month.to_i
+                      year = fecha.strftime('%Y')
+                      month = Debit.get_human_date_and_type(month.to_s)
+                  %>
+                  <tr>
+                    <td class="adeudos"><%= debit.description %></td>
+                    <td> $ <%= debit.amount.to_s %> </td>
+                    <td> <%= month[:mes] %></td>
+                    <td> <%= year %> </td>
+                  </tr>
+                  <% end %>
+                <% else %>
+                  <tr>
+                    <td colspan="14" style="text-align: center">No existen adeudos</td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

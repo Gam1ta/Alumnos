@@ -1,0 +1,43 @@
+<% unless @inscripciones_agrupadas.blank? %>
+  <!--panel inscripciones agrupadas-->
+  <div class="row">
+
+    <div class="col-md-12 espacio">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-lg-2">
+              <h4>Inscripciones</h4>
+            </div>
+
+            <div class="col-lg-10">
+              <span class="pull-right">
+                <!-- Tabs -->
+                <ul class="nav panel-tabs">
+                  <% @inscripciones_agrupadas.each do |clave, inscripciones| %>
+                    <li class="<%=  clave=="PRIMERO" ? 'active' : 'other' %>"> <a href="#inscripcion<%= clave %>" data-toggle="tab"> <%= capitalize_with_accents(clave) %> </a></li>
+                  <% end %>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <div class="tab-content">
+            <% @inscripciones_agrupadas.each do |clave, inscripciones|%>
+            <div class="tab-pane  <%=  clave=="PRIMERO" ? 'active' : 'other' %>" id="inscripcion<%= clave %>">
+              <% inscripciones.each do  |inscripcion| %>
+                <%= render 'info_inscripcion' , :inscripcion => inscripcion%>
+              <% end %>
+            </div>
+            <%end%>     
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>              
+
+<% else %>
+  <%= render :partial => "shared/messages", :locals => { :msg => 'No te has inscrito en algun periodo.', :class_name => 'danger' } %>
+<% end %>

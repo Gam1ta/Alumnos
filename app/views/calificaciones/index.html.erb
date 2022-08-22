@@ -1,0 +1,22 @@
+<%# javascript 'calificaciones/index' %>
+
+<% unless @consulta_examenes.inscripciones.nil? %>
+  <!--panel calificaciones-->
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 espacio">
+      <div class="well">
+        <h4>Consulta de Calificaciones por Inscripción</h4>
+        <hr>
+        <div class="form-group">
+          <label for="portal_inscripcion_id" class="control-label">Elige una inscripción:</label>
+          <%= select :portal, :inscripcion_id, options_for_select(@consulta_examenes.inscripciones.collect{ |i| [i.full_inscripcion, i.inscripcion_id]}), {:include_blank => '---Seleccione un Semestre---'}, :class => 'form-control' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="calificaciones_div"></div>
+<% else %>
+  <%= render :partial => "shared/messages", :locals => { :msg => 'No estás inscrito en ninguna carrera.', :class_name => 'danger' } %>
+<% end %>

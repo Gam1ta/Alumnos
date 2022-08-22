@@ -1,0 +1,83 @@
+<table class="table table-striped ">
+  <thead></thead>
+  <tbody>
+  <tr>
+    <th class="header-table-estancias"><h4>Empresas para Estancias</h4></th>
+  </tr>
+  </tbody>
+</table>
+
+
+<br>
+<div class="empresas_search">
+	<div class="col-md-6"></div>
+	<div class="col-md-6">
+		<%= form_tag :action => :index, :class => "form-inline" do %>
+			<div class="custom-search-input">
+				<div class="input-group">
+					<%= text_field_tag :search, @search, :class => "form-control" %>
+					<%= text_field_tag :tab, "empresas", :style => "display: none;" %>
+				  
+					<span class="input-group-btn">
+						<%= submit_tag 'Buscar', :class => "btn btn-primary" %>
+						<%= submit_tag 'Limpiar', :class => "btn btn-primary" if @search != "" %>
+					</span>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+
+<br>
+<span style="<%= 'color:red;' if @periodo_valido_opciones == false %>">
+  <h4 class="text-center">Periodo de registro de opciones: <%= (@fecha_opciones_inicio == nil) ? "No Registrado": (l @fecha_opciones_inicio) %> - <%= (@fecha_opciones_fin == nil) ? "No Registrado": (l @fecha_opciones_fin) %></h4>
+</span>
+<br/>
+
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th  class="header-table-estancias">#</th>
+			<th  class="header-table-estancias">Nombre</th>
+			<th  class="header-table-estancias">Tipo</th>
+			<th  class="header-table-estancias">Contacto</th>
+			<th  class="header-table-estancias">Cargo</th>
+			<th  class="header-table-estancias">Teléfono</th>
+			<th  class="header-table-estancias">Ciudad</th>
+			<th  class="header-table-estancias">Correo</th>
+			<% if @periodo_valido_opciones == true %>
+				<th  class="header-table-estancias"></th>
+			<% end %>
+		</tr>
+	</thead>
+	<tbody>	
+		<% index = (params[:page].to_i >= 2) ? (((params[:page].to_i - 1) * 10) + 1) : 1 %>
+		<% @empresas.each do |empresa| %>
+			<tr class="table_tipoB_hover">
+			  <td style="width: 3%; text-align: left"><%= index %></td>
+			  <td style="width: 20%; text-align: left"><%= empresa.nombre %></td>
+			  <td style="width: 10%; text-align: left"><%= empresa.sector %></td>
+			  <td style="width: 20%; text-align: left"><%= empresa.contacto_nombre %></td>
+			  <td style="width: 20%; text-align: left"><%= empresa.contacto_cargo %></td>
+			  <td style="width: 15%; text-align: left"><%= empresa.telefono %></td>
+			  <td style="width: 15%; text-align: left"><%= empresa.ciudad %></td>
+			  <td style="width: 10%; text-align: left"><%= empresa.contacto_correo %></td>
+			  <% if @periodo_valido_opciones == true %>
+				  <td style="width: 7%">
+					<%= link_to "Agregar", {:action => :add_empresa, :id => empresa.id},
+						:data => {:confirm => "¿Estás seguro de agregar esta empresa a tus opciones?"},
+						:title => "Agregar a mis opciones de Empresas",
+            :class=>"btn button-link" %>
+				  </td>
+			  <% end %>
+			</tr>
+			<% index += 1 %>
+		<% end %>
+	</tbody>
+</table>
+
+<div style="padding-bottom: 30px;">
+	<%= will_paginate @empresas, :params => {:tab => "empresas"}, :class => "nes_alumnos_pagination" %>
+</div>

@@ -1,0 +1,5 @@
+<% if @alumno.nil? %>
+  <h3>El alumno no fue encontrado en la lista de aprobados</h3>
+<% else %>
+  <h3>El alumno <%= @alumno.nombre + " " + @alumno.apellido_paterno + " " + @alumno.apellido_materno %> ha aprobado el propedéutico</h3>
+<% end %>

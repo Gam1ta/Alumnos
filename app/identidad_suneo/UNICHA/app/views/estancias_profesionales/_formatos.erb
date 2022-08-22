@@ -1,0 +1,50 @@
+<table class="table table-striped break_space">
+	<thead></thead>
+	<tbody>
+    <tr>
+      <th colspan="2" class="header-table-estancias">
+        <h4>Formatos para Estancias</h4>
+      </th>
+    </tr>
+
+		<tr >
+			<td class="table-estancias-formatos" align="center">
+        <b>Formato de reporte parcial</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "reporte_parcial"},
+                  :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Formato de evaluación final</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "reporte_evaluacion"},
+                 :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b >Cuestionario de terminación E.P.</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "cuestionario_terminacion"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="table-estancias-formatos">
+        <b>Formato de recepción de documentos E.P.</b>
+      </td>
+			<td class="table-estancias">
+				<%= link_to "Descargar...", {:action => :download, :nombre_archivo => "formato_recepcion_documentos"},
+                    :class=>"btn button-link"%>
+			</td>
+		</tr>
+	</tbody>
+</table>

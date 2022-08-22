@@ -1,0 +1,22 @@
+<h1>Catálogo de Usuarios</h1>
+<h3>Creación de Usuario</h3>
+
+<% form_for(@user) do |form| %>
+  <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <br/>
+  <%= render :partial => "form", :object => form %>
+  <br/>
+  <table>
+    <tr>
+      <td><%= form.submit "Guardar Nuevo" %></td>
+      <td><%= button_to "Cancelar", users_path, :confirm => "¿Está seguro de cancelar la creación?" %></td>
+    </tr>
+  </table>
+<% end %>

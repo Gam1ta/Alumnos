@@ -1,0 +1,75 @@
+<article>
+  <div id="PlacaTitulo"><h1>Historial Académico</h1></div>
+
+  <% if @mensaje.nil? %>
+    <% @consulta_calificaciones.carreras.each do |carrera| %>     
+      <div class="content_table_simple">
+        <table class="table_simple">
+          <tbody>
+            <tr>
+              <td><%= carrera.header %></td>
+            </tr>         
+          </tbody>                    
+        </table>
+      </div>      
+
+      <% carrera.calificaciones.each do |calificacion| %>
+        <div class="contenido_tabla">
+
+          <h3> <%= calificacion.header %></h3>
+
+          <table class="table_tipoB">
+            <thead>
+              <tr>
+                <th>Clave:</th>
+                <th>Asignatura:</th>
+                <th>P1:</th>
+                <th>A1:</th>
+                <th>P2:</th>
+                <th>A2:</th>
+                <th>P3:</th>
+                <th>A3:</th>
+                <th>O:</th>
+                <th>PA:</th>
+                <th>PF:</th>
+                <th>EX1:</th>
+                <th>EX2:</th>
+                <th>ESP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if calificacion.calificaciones.empty? %>
+                <tr>
+                  <td colspan="14" style="text-align: center">No hay Calificaciones</td>
+                </tr>
+              <% else %>
+                <% calificacion.calificaciones.each do |c| %>
+                  <tr>                      
+                    <td><%= c.clave %></td>
+                    <td><%= c.nombre %></td>
+                    <td <%= get_color_for_calificacion(c.get_parcial1_sd_or_np) %>><%= c.get_parcial1_sd_or_np %></td>
+                    <td <%= get_color_for_asistencia(c.asistencia_p1) %>><%= number_to_percentage(c.asistencia_p1, :precision => 0) %></td>
+                    <td <%= get_color_for_calificacion(c.get_parcial2_sd_or_np)%>><%= c.get_parcial2_sd_or_np %></td>
+                    <td <%= get_color_for_asistencia(c.asistencia_p2) %>><%= number_to_percentage(c.asistencia_p2, :precision => 0) %></td>
+                    <td <%= get_color_for_calificacion(c.get_parcial3_sd_or_np)%>><%= c.get_parcial3_sd_or_np %></td>
+                    <td <%= get_color_for_asistencia(c.asistencia_p3) %>><%= number_to_percentage(c.asistencia_p3, :precision => 0) %></td>
+                    <td <%= get_color_for_calificacion(c.final)%>><%= c.final %></td>
+                    <td <%= get_color_for_asistencia(c.asistencia_final) %>><%= number_to_percentage(c.asistencia_final, :precision => 0) %></td>
+                    <td <%= get_color_for_calificacion(c.promedio)%>><%= c.promedio %></td>
+                    <td <%= get_color_for_calificacion(c.get_extra1_sd_or_np)%>><%= c.get_extra1_sd_or_np %></td>
+                    <td <%= get_color_for_calificacion(c.get_extra2_sd_or_np)%>><%= c.get_extra2_sd_or_np %></td>
+                    <td <%= get_color_for_calificacion(c.get_especial_sd_or_np)%>><%= c.get_especial_sd_or_np %></td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      <% end %>
+    <% end %>
+  <% else %>
+    <div id="message">
+      <%= @mensaje %>
+    </div>
+  <% end %>
+</article>

@@ -1,0 +1,63 @@
+
+<div class="row">
+  <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+    <div class="table-responsive">
+      <table class="table table-user-information table-bordered table-list">
+        <thead>
+        <th colspan="2"> <%= get_semester_name(inscripcion.semestr.clave_semestre)%> SEMESTRE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="info">Carrera: </th>
+            <td><%= inscripcion.carrera.nombre_carrera.to_s %></td>
+          </tr>
+
+          <tr>
+            <th class="info">Periodo Escolar: </th>
+            <td> <%= inscripcion.ciclo.ciclo.to_s  %></td>
+          </tr>
+          <tr>
+            <th class="info">Grupo(s): </th>
+            <td> <%=  inscripcion.grupo.nombre%> </td>     
+          </tr>
+          <tr>
+            <th class="info">Beca </th>
+            <td><%= !inscripcion.beca.nil? ? inscripcion.beca.to_s + "%" : "Sin Beca Asignada" %></td> 
+          </tr>
+          <%
+            cadena = ""
+            asignaturas = Curso.select("cursos.id, materias_planes.nombre, materias_planes.orden").
+                joins(:inscripciones_cursos, :asignatura).
+                where(:inscripciones_cursos => {:inscripcion_id => inscripcion.id}).
+                order("materias_planes.orden")
+
+            unless asignaturas.blank?
+              asignaturas.each_with_index do |a,index|
+                if !(asignaturas.size.to_i-1) == index.to_i
+                cadena  = cadena.to_s + a.nombre.to_s + "\n"+ "NC"
+                else
+                cadena = cadena.to_s + a.nombre.to_s+ " ,"
+                end
+              end
+            else
+              cadena = "NO EXISTE REGISTRO DE ASGINATURAS PARA ESTÁ INSCRIPCIÓN"
+            end
+          %>
+          <tr>
+            <th class="info">Materias </th>
+            <td>
+              <div>
+
+              <%= cadena.each_line {|s| p s}%>
+
+
+              </div>
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

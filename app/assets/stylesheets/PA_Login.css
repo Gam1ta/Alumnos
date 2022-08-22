@@ -1,0 +1,45 @@
+
+
+.top {
+    margin-top: 250px;
+}
+
+.panel {
+    margin-bottom: 0px;
+    }
+
+
+.well {
+background-color: rgba(255, 255, 255, .85);
+border: 0;
+}
+
+.fondo {
+background: #18457c; 
+background: -moz-linear-gradient(left,  #18457c 1%, #1e5799 22%, #207cca 56%, #24a2e5 83%, #7acce2 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #18457c 1%,#1e5799 22%,#207cca 56%,#24a2e5 83%,#7acce2 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #18457c 1%,#1e5799 22%,#207cca 56%,#24a2e5 83%,#7acce2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18457c', endColorstr='#7acce2',GradientType=1 ); /* IE6-9 */
+}
+
+.caveman-gif {
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.caveman-gif img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -1px;
+}
+
+.texto-aviso
+{
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    left: 5000px;
+
+}

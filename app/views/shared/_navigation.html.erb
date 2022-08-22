@@ -1,0 +1,67 @@
+
+<!--Menú de Navegación-->
+<div class="container">
+  <div class="row ">
+    <div class="btn-group btn-group-justified well_menu">
+
+      <!-- links-->
+
+      <!--<div class="btn-group">
+        <%#= link_to(root_path, :class => 'btn btn-nav' + active('home', false, ['user_data', 'show_inscripciones'].include?(params[:action]))) do %>
+          <i class="fa fa-home"></i><span class="textos_menu hidden-sm hidden-xs"> Inicio </span>
+        <%#end %>
+      </div>-->
+
+      <div class="btn-group">
+        <%= link_to(horarios_path, :class => 'btn btn-nav' + active('horarios')) do %>
+          <i class="fa fa-clock-o"></i><span class="textos_menu hidden-sm hidden-xs"> Horario de Clases </span>
+        <% end %>
+      </div>
+
+      <div class="btn-group">
+        <%= link_to(calificaciones_path, :class => 'btn btn-nav' + active('calificaciones')) do %>
+          <i class="fa fa-list-alt"></i><span class="textos_menu hidden-sm hidden-xs"> Calificaciones </span>
+        <% end %>
+      </div>
+
+
+      <div class="btn-group">
+        <%= link_to(examenes_path, :class => 'btn btn-nav' + active('examenes')) do %>
+          <i class="fa fa-calendar-check-o"></i><span class="textos_menu hidden-sm hidden-xs">  Calendario de Exámenes </span>
+        <% end %>
+      </div>
+
+      <%#*<div class="btn-group">%>
+      <%#= link_to(root_path, :class => 'btn btn-nav') do %>
+      <%#*<i class="fa fa-pencil"></i><span class="textos_menu hidden-sm hidden-xs"> Solicitud de Exámenes </span>%>
+      <%# end %>
+      <%#*</div>%>
+
+      <div class="btn-group">
+        <%= link_to(adeudos_path, :class => 'btn btn-nav' + active('adeudos') ) do %>
+          <i class="fa fa-usd"></i><span class="textos_menu hidden-sm hidden-xs">  Adeudos </span>
+        <% end %>
+      </div>
+
+      <div class="btn-group">
+        <%= link_to(estancias_profesionales_path, :class => 'btn btn-nav' + active('estancias_profesionales')) do %>
+          <i class="fa fa-building"></i><span class="textos_menu hidden-sm hidden-xs">  Estancias Profesionales </span>
+        <% end %>
+      </div>
+
+      <%#   @fecha_verano_inicio_7sem_menu = EstanciasConfig.first.fecha_verano_inicio_7sem
+           @fecha_verano_fin_7sem_menu = EstanciasConfig.first.fecha_verano_fin_7sem %>
+
+
+
+      <%# if @last_inscripcion.semestre_id.to_s >= '6' ||  @last_inscripcion.semestre_id.to_s == '12'%>
+        <%# if @fecha_verano_inicio_7sem_menu && @fecha_verano_fin_7sem_menu%>
+          <%# if  Date.today >= @fecha_verano_inicio_7sem_menu  && Date.today <= @fecha_verano_fin_7sem_menu  %>
+
+          <%#end%>
+    <%#end %>
+    <%#end %>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,197 @@
+<% if @mensaje.nil? %>
+  <% unless @examenes.empty? %>
+
+    <!--panel calendario examenes-->
+    <div class="row">
+
+      <div class="col-md-12 espacio">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-lg-3">
+                <h4>Calendarios de Exámenes</h4>
+              </div>
+
+              <div class="col-lg-9">
+                <span class="pull-right">
+                  <!-- Tabs -->
+                  <ul class="nav panel-tabs">
+                    <% @examenes.each_with_index do |examen, index| %>
+                      <li class="<%=  index==0 ? 'active' : 'other' %>"> <a href="#exa<%= index %>" data-toggle="tab"> <%= examen.nombre.capitalize  %> </a></li>
+                    <% end %>
+                  </ul>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <div class="tab-content">
+              <% @examenes.each_with_index do |examen, index| %>
+                <div class="tab-pane  <%=  index==0 ? 'active' : 'other' %>" id="exa<%= index %>">
+                  <div class="panel-body panel-table">
+                    <div class="table-responsive">
+                      <table class="table table-striped table-bordered">
+                        <thead>
+                          <tr>
+                            <th class="color_tr">Asignatura</th>
+                            <th class="color_tr">Fecha</th>
+                            <th class="color_tr">Hora</th>
+                            <th class="color_tr">Aula</th>
+                            <th class="color_tr">Profesor</th>
+                          </tr> 
+                        </thead>
+
+                        <tbody>
+                          <% if examen.exist %>
+                            <% examen.examenes.each do |examen_class| %>
+                              <tr>
+                                <td><%= examen_class.nombre %></td>
+                                <td><%= convert_to_human_date(examen_class.fecha) %></td>
+                                <td><%= examen_class.horas %></td>
+                                <td><%= examen_class.aula %></td>
+                                <td><%= examen_class.profesor_full_name %></td>
+                              </tr>
+                            <% end %>
+                          <% else %>
+                            <tr>
+                              <td colspan="5" style="text-align: center">No hay calendario para este examen.</td>
+                            </tr>
+                          <% end %>                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <%= render :partial => "shared/messages", :locals => { :msg => 'No estás inscrito a ninguna asignatura para la inscripción seleccionada.', :class_name => 'info' } %>
+  <% end %>
+<% else %>
+  <%= render :partial => "shared/messages", :locals => { :msg =>  @mensaje, :class_name => 'info' } %>
+<% end %>
+
+<!--CALENDARIO PARA IDIOMAS
+< % if @mensaje_idiomas.nil? %>
+  
+    <div class="row">
+
+      <div class="col-md-12 espacio">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-lg-4">
+                <h4>Calendarios de Exámenes para Idiomas</h4>
+              </div>
+              <div class="col-lg-8">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <div class="tab-content">
+              < % @calendario_idiomas.each do |examen| %>
+                <div class="panel-body panel-table">
+                  <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                      <thead>
+                         <tr>
+                          <th colspan="5" class="color_tr">< %= examen[:idioma] %> --- < %= examen[:nivel] %></th>                      
+                        </tr>
+                        <tr>
+                          <th class="color_tr">Parcial 1</th>
+                          <th class="color_tr">Parcial 2</th>
+                          <th class="color_tr">Parcial 3</th>
+                          <th class="color_tr">Final</th>
+                          <th class="color_tr">Extraordinario</th>
+                        </tr> 
+                      </thead>
+
+                      <tbody>                                                
+                        <tr>                                                    
+                          < % exam = examen[:examenes] %>
+                          < % p1 =  exam.find {|x| x[:examen] == "Parcial 1"} %>
+                          < % p2 =  exam.find {|x| x[:examen] == "Parcial 2"} %>
+                          < % p3 =  exam.find {|x| x[:examen] == "Parcial 3"} %>
+                          < % fi =  exam.find {|x| x[:examen] == "Final"} %>
+                          < % ex =  exam.find {|x| x[:examen] == "Extraordinario"} %>
+                          
+                          < % if p1.blank? %>
+                            <td>Sin asignación</td>
+                          < % else %>
+                            <td>                              
+                              <p>Profesor: < %= p1[:profesor]%></p>
+                              <p>Fecha: < %= convert_to_human_date(p1[:fecha])%></p>
+                            </td>
+                          < % end %>
+
+                          < % if p2.blank? %>
+                            <td>Sin asignación</td>
+                          < % else %>
+                            <td>                            
+                              <p>Profesor: < %= p2[:profesor]%></p>
+                              <p>Fecha: < %= convert_to_human_date(p2[:fecha])%></p>
+                            </td>
+                          < % end %>
+
+                          < % if p3.blank? %>
+                            <td>Sin asignación</td>
+                          < % else %>
+                            <td>
+                              <p>Profesor: < %= p3[:profesor]%></p>
+                              <p>Fecha: < %= convert_to_human_date(p3[:fecha])%></p>
+                            </td>
+                          < % end %>
+
+                          < % if fi.blank? %>
+                            <td>Sin asignación</td>
+                          < % else %>
+                            <td>
+                              < % fi[:detalles].each do |dt| %>
+                                <p>Habilidad: < %= dt[:habilidad]%></p>
+                                <p>Fecha: < %= convert_to_human_date(dt[:fecha])%></p>
+                                <p>Hora: < %= dt[:hora]%></p>
+                                <p>Hora: < %= dt[:lugar]%></p>
+                                <p>__________________________</p>
+                              < %  end %>
+                            </td>
+                          < % end %>                          
+                          < % if ex.blank? %>
+                            <td>Sin asignación</td>
+                          < % else %>
+                            <td>
+                              < % ex[:detalles].each do |xt| %>
+                                <p>Habilidad: < %= xt[:habilidad]%></p>
+                                <p>Fecha: < %= convert_to_human_date(xt[:fecha])%></p>
+                                <p>Hora: < %= xt[:hora]%></p>
+                                <p>Hora: < %= xt[:lugar]%></p>
+                                <p>__________________________</p>
+                              < %  end %>
+                            </td>
+                          < % end %>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+              < % end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+< % else %>
+  < %= render :partial => "shared/messages", :locals => { :msg =>  @mensaje_idiomas, :class_name => 'info' } %>
+< % end %>
+-->

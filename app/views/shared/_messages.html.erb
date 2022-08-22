@@ -1,0 +1,26 @@
+<% unless msg.blank? %>
+  
+    <div class="row"> 
+      <div class="col-md-6 col-md-offset-3">
+        <div class="alert alert-<%= class_name %> alert-dismissible" role="alert" > 
+          <button type="button" class="close" data-dismiss="alert"> 
+            <span aria-hiden="true">&times;</span>
+            <span class="sr-only">close</span>
+          </button>          
+          <% if defined?(msg_title) && msg_title.present?  %> 
+          <h3 class="text-center"> <%= upcase_with_accents(msg_title) %> </h3>
+          <% end %>
+          <% if msg.instance_of?(Array) %>
+          <p class="text-center">
+            <% msg.each do |m| %>
+              <%= m %> <br/>
+            <% end %>
+            </p>
+          <% else %>
+            <p class="text-center"> <%= msg %> </p>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+<% end %>

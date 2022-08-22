@@ -1,0 +1,2 @@
+module HistorialAlumnoHelper
+end

@@ -1,0 +1,107 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  date:
+    month_names:
+      1: "january"
+      2: "february"
+      3: "march"
+      4: "april"
+      5: "may"
+      6: "june"
+      7: "july"
+      8: "august"
+      9: "september"
+      10: "october"
+      11: "november"
+      12: "december"
+  date:
+    abbr_day_names:
+    - sun
+    - mon
+    - tues
+    - wed
+    - thurs
+    - fri
+    - sat
+    abbr_month_names:
+    - 
+    - jan
+    - feb
+    - mar
+    - apr
+    - may
+    - jun
+    - jul
+    - aug
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - sunday
+    - monday
+    - tuesday
+    - wednesday
+    - thursday
+    - friday
+    - saturday
+    formats:
+      default: "%d/%m/%Y"
+      long: "%A, %d de %B de %Y"
+      short: "%d de %b"
+    month_names:
+    - 
+    - january
+    - february
+    - march
+    - april
+    - may
+    - june
+    - july
+    - august
+    - september
+    - october
+    - november
+    - dicember
+    order:
+    - :day
+    - :month
+    - :year      
+  authlogic:
+    error_messages:
+      login_blank: "Nombre de Usuario no proporcionado. Inténtelo nuevamente"
+      login_not_found: "Nombre de Usuario y/o Contraseña inválidos. Inténtelo nuevamente"
+      login_invalid: "Nombre de Usuario y/o Contraseña inválidos. Inténtelo nuevamente"
+      consecutive_failed_logins_limit_exceeded: "Se ha superado el límite de intentos fallidos, la cuenta ha sido deshabilitada"
+      #email_invalid: "es inválido. Formato correcto: nombre-de-cuenta@servidor.dominio"
+      password_blank: "Contraseña no proporcionada. Inténtelo nuevamente"
+      password_invalid: "Nombre de Usuario y/o Contraseña inválidos. Inténtelo nuevamente"
+      not_active: "Su cuenta no está activada"
+      not_confirmed: "Su cuenta no ha sido confirmada"
+      not_approved: "Su cuenta no ha sido aprobada"
+      no_authentication_details: "No se proporcionaron datos de ingreso. Inténtelo nuevamente"
+    attributes:
+      user_session:
+        login: ""
+        email: "Correo Electrónico"
+        password: ""

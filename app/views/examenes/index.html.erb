@@ -1,0 +1,22 @@
+<%# javascript 'examenes/index' %>
+
+<% unless @consulta_examenes.inscripciones.empty? %>
+
+  <!--panel examenes-->
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 espacio">
+      <div class="well">
+        <h4>Consulta de Calendario de Exámenes </h4>
+        <hr>
+        <div class="form-group">
+          <label for="examenes_inscripcion_id" class="control-label">Elige un semestre:</label>
+          <%= select :examenes, :inscripcion_id, options_for_select(@consulta_examenes.inscripciones.collect{ |i| [i.full_inscripcion, i.inscripcion_id]}), {:include_blank => '---Seleccione  un Semestre---'}, :class => 'form-control' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="examenes_list"></div>
+<% else %>
+  <%= render :partial => "shared/messages", :locals => { :msg => 'No estás inscrito en ninguna carrera.', :class_name => 'danger' } %>
+<% end %>

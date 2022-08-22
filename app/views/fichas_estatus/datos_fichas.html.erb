@@ -1,0 +1,43 @@
+<div id="PlacaTitulo"><h1>Aspirantes de fichas</h1></div>
+<br/><br/>
+<h2>
+  
+CARRERA:
+<%=@nombre_carre.nombre_carrera.to_s%></h2>
+<% if !@fichas.blank? %>
+  <table class="titled2" style="width: 90%">
+         <thead>
+      <tr>
+        <td>
+          Numero de Ficha
+        </td>
+        <td>
+          Nombre
+        </td>
+        <td>
+          Estatus
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @datos.each do |f| %>
+        <tr>
+          <td>
+            <%= f[:num_ficha] %>
+          </td>
+          <td>
+            <%= f[:nom_alumno] %>
+          </td>
+          <td>
+            <%= f[:estatus] %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<%else%>
+
+  No hay aspirantes de fichas
+<%end%>
+<br></br>
+<%= link_to image_tag("regresar.png",:title=>"Regresar"), :action=>:index %>

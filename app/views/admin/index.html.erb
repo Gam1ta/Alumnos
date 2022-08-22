@@ -1,0 +1,29 @@
+<div class="">
+  <% if @usuario %>
+    <% if @usuario.login.blank?  %>
+      <%= render :partial => "shared/messages", :locals => { :msg => "El usuario no esta registrado en el sistema", :class_name => "error" } %>
+    <% else %>
+      <div class="espacio">
+        <div class="well">
+          <div class="row">
+            <div class="col-lg-12">
+              <%=  image_tag("logo_utm-03.jpg",  :class => "img-responsive center-block") %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 espacio_2">
+              <h3 class="text-center"><%=@universidad.nombre%></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <h4 class="text-center ">Departamento de Servicios Escolares</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to "Página de Ingreso", new_user_session_path %>
+  <% end %>
+</div>

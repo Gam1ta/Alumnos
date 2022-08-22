@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte_horarios" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.771561000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="xPath">
+		<![CDATA[/reporte/informacion/datos]]>
+	</queryString>
+	<field name="materia" class="java.lang.String">
+		<fieldDescription><![CDATA[materia]]></fieldDescription>
+	</field>
+	<field name="nomb-profesor" class="java.lang.String">
+		<fieldDescription><![CDATA[nomb-profesor]]></fieldDescription>
+	</field>
+	<field name="lunes-hora" class="java.lang.String">
+		<fieldDescription><![CDATA[lunes-hora]]></fieldDescription>
+	</field>
+	<field name="lunes-aula" class="java.lang.String">
+		<fieldDescription><![CDATA[lunes-aula]]></fieldDescription>
+	</field>
+	<field name="martes-hora" class="java.lang.String">
+		<fieldDescription><![CDATA[martes-hora]]></fieldDescription>
+	</field>
+	<field name="martes-aula" class="java.lang.String">
+		<fieldDescription><![CDATA[martes-aula]]></fieldDescription>
+	</field>
+	<field name="miercoles-hora" class="java.lang.String">
+		<fieldDescription><![CDATA[miercoles-hora]]></fieldDescription>
+	</field>
+	<field name="miercoles-aula" class="java.lang.String">
+		<fieldDescription><![CDATA[miercoles-aula]]></fieldDescription>
+	</field>
+	<field name="jueves-hora" class="java.lang.String">
+		<fieldDescription><![CDATA[jueves-hora]]></fieldDescription>
+	</field>
+	<field name="jueves-aula" class="java.lang.String">
+		<fieldDescription><![CDATA[jueves-aula]]></fieldDescription>
+	</field>
+	<field name="viernes-hora" class="java.lang.String">
+		<fieldDescription><![CDATA[viernes-hora]]></fieldDescription>
+	</field>
+	<field name="viernes-aula" class="java.lang.String">
+		<fieldDescription><![CDATA[viernes-aula]]></fieldDescription>
+	</field>
+	<field name="nomb-univ" class="java.lang.String">
+		<fieldDescription><![CDATA[/reporte/informacion/encabezado/nomb-univ]]></fieldDescription>
+	</field>
+	<field name="nomb-formato" class="java.lang.String">
+		<fieldDescription><![CDATA[/reporte/informacion/encabezado/nomb-formato]]></fieldDescription>
+	</field>
+	<field name="grupo" class="java.lang.String">
+		<fieldDescription><![CDATA[/reporte/informacion/encabezado/grupo]]></fieldDescription>
+	</field>
+	<group name="materia">
+		<groupExpression><![CDATA[$F{materia}]]></groupExpression>
+		<groupHeader>
+			<band height="81">
+				<rectangle>
+					<reportElement mode="Transparent" x="25" y="26" width="500" height="30" backcolor="#FEFEFE"/>
+				</rectangle>
+				<textField>
+					<reportElement x="35" y="41" width="241" height="15"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{materia}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="290" y="41" width="206" height="15"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{nomb-profesor}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="35" y="26" width="45" height="15"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MATERIA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="290" y="26" width="57" height="15"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PROFESOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="25" y="64" width="65" height="15"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[LUNES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="125" y="64" width="65" height="15"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MARTES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="225" y="64" width="65" height="15"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MIERCOLES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="325" y="64" width="65" height="15"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[JUEVES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="425" y="64" width="65" height="15"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[VIERNES]]></text>
+				</staticText>
+				<line>
+					<reportElement x="25" y="79" width="500" height="1"/>
+				</line>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="108">
+			<textField>
+				<reportElement x="90" y="19" width="439" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nomb-univ}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="12" y="9" width="90" height="89"/>
+				<imageExpression class="java.lang.String"><![CDATA["../../public/images/suneo.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="90" y="39" width="439" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nomb-formato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="59" width="439" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{grupo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="25" y="0" width="65" height="15"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{lunes-hora}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="125" y="0" width="65" height="15"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{martes-hora}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="225" y="0" width="65" height="15"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{miercoles-hora}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="325" y="0" width="65" height="15"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{jueves-hora}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="425" y="0" width="65" height="15"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{viernes-hora}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="25" y="15" width="65" height="15"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{lunes-aula}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="125" y="15" width="65" height="15"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{martes-aula}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="225" y="15" width="65" height="15"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{miercoles-aula}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="325" y="15" width="65" height="15"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{jueves-aula}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="425" y="15" width="65" height="15"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{viernes-aula}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

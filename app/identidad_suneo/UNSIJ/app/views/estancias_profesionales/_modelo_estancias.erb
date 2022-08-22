@@ -1,0 +1,96 @@
+<table class="table table-striped ">
+  <thead></thead>
+  <tbody>
+  <tr>
+    <th class="header-table-estancias">¿Qué son las Estancias Profesionales?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      Se entenderá por estancia profesional aquella actividad realizada durante el desarrollo de un proyecto o a través de la participación directa del estudiante en el desempeño de su propia profesión.
+      <br><br>
+      <span class="negritaObjetivo">Objetivo</span>
+      <ul type="square" style="margin-left:4em">
+        <li>Aplicar los conocimientos y habilidades adquiridos durante su formación profesional.</li>
+        <li>Entrar en contacto con diversas organizaciones relacionadas con su futuro campo profesional.</li>
+        <li>Fortalecer la vinculación entre la educación superior y los sectores productivos de bienes y servicios.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿Dónde realizarlas?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      Esta actividad la puede realizar el alumno en Instituciones de gobierno, Organismos no gubernamentales, Empresas públicas y privadas del país, así como también en el Extranjero.
+  </tr>
+  <tr>
+    <th class="header-table-estancias">¿Cuántas horas se deben realizar?</th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      Para el cumplimiento de las Estancias Profesionales, deben cubrir 560 horas, dividida en dos periodos de verano.
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Periodos de Estancias Profesionales</th>
+  </tr>
+  <tr>
+    <td>
+      <h4>
+        <span class="text-left negritaObjetivo">Fechas para los Periodos de Estancias Profesionales</span>
+      </h4>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th class="style_periodos">Periodo</th>
+          <th class="style_periodos">Fecha de Inicio</th>
+          <th class="style_periodos">Fecha de Término</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="td_periodos">Primero</td>
+          <td class="td_periodos"><%=(@inicio_periodo_uno == nil)?  "No Registrado": (l @inicio_periodo_uno)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_uno == nil)?  "No Registrado": (l @fin_periodo_uno)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Segundo</td>
+          <td class="td_periodos"><%= (@inicio_periodo_dos == nil)?  "No Registrado": (l @inicio_periodo_dos)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_dos == nil)?  "No Registrado": (l @fin_periodo_dos)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Tercero</td>
+          <td class="td_periodos"><%= (@inicio_periodo_tres == nil)?  "No Registrado": (l @inicio_periodo_tres)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_tres == nil)?  "No Registrado": (l @fin_periodo_tres)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Cuarto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cuatro == nil)?  "No Registrado": (l @inicio_periodo_cuatro)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cuatro == nil)?  "No Registrado": (l @fin_periodo_cuatro)%></td>
+        </tr>
+        <tr>
+          <td class="td_periodos">Quinto</td>
+          <td class="td_periodos"><%= (@inicio_periodo_cinco == nil)?  "No Registrado": (l @inicio_periodo_cinco)%></td>
+          <td class="td_periodos"><%= (@fin_periodo_cinco == nil)?  "No Registrado": (l @fin_periodo_cinco)%></td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th class="header-table-estancias">Requisitos </th>
+  </tr>
+  <tr>
+    <td class="table-estancias">
+      Los requisitos que debe cumplir el alumno para realizar sus estancias profesionales son los siguientes:
+      <ol type="square" style="margin-left:4em">
+        <li>Alumnos regulares que hayan culminado el sexto semestre</li>
+        <li>Alumnos que se encuentren inscritos</li>
+        <li>Alumnos que no se encuentren cursando cursos remediales (verano)</li>
+      </ol>
+        Los alumnos deben tramitar su carnet de citas y pedir constancia de vigencia de derechos del IMSS donde están dados de alta (Ixtlán de Juárez, Oaxaca).
+    </td>
+  </tr>
+  </tbody>
+</table>
