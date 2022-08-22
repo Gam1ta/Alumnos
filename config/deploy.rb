@@ -1,8 +1,8 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.1"
 
-set :application, "nes-alumnos1"
-set :repo_url, "git@github.com:Gam1ta/Prubea-Capistrano.git"
+set :application, "nes-alumnos-3"
+set :repo_url, "git@github.com:Gam1ta/Alumnos.git"
 #set :deploy_to, '/home/gamaliel/var/www/nes-alumnos1'
 #set :deploy_to, '/var/www/nes-alumnos-test/public'
 #configuración para establecer la versión de Ruby y la ruta de acceso a RVM
@@ -13,7 +13,7 @@ set :rvm_ruby_version, "ruby-2.2.1"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
- set :deploy_to, "/var/www/nes-alumnos1"
+ set :deploy_to, "/var/www/nes-alumnos-3"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
